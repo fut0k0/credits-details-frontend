@@ -14,11 +14,21 @@ class Signup extends React.Component {
 		})
 	}
 
+	handleSubmit = event => {
+		event.preventDefault();
+		
+		this.setState({
+			username: "",
+			password: "",
+			passwordConfirm: ""
+		});
+	}
+
 	render() {
 		return (
 			<div>
 				Sign Up
-				<form>
+				<form onSubmit={this.handleSubmit}>
 					<label>
 						username:{" "}
 						<input

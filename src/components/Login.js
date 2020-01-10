@@ -21,7 +21,7 @@ class Login extends React.Component {
 		this.setState({
 			username: "",
 			password: ""
-		})
+		});
 	}
 
 	render() {
