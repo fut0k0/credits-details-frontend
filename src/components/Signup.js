@@ -65,7 +65,8 @@ class Signup extends React.Component {
 							value={this.state.passwordConfirm}
 							onChange={this.handleChange} />
 					</label><br />
-					{(this.state.password === this.state.passwordConfirm)
+					{(this.state.password === this.state.passwordConfirm && this.state.password
+						&& this.state.username)
 						? <input type="submit" /> : <input type="submit" disabled="disabled" />}
 				</form>
 			</div>
