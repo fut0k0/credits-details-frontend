@@ -20,4 +20,22 @@ const login = loginData => (
 	}
 )
 
-export { login }
+const signup = signupData => (
+	dispatch => {
+		fetch("http://localhost:3000/api/v1/signup", {
+			method: "POST",
+			credentials: "include",
+			headers: {
+				"Content-Type": "application/json",
+				"Accept": "application/json"
+			},
+			body: JSON.stringify(signupData)
+		})
+		.then(resp => resp.json())
+		.then(userData => {
+			console.log(userData)
+		})
+	}
+)
+
+export { login, signup }

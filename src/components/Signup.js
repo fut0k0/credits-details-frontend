@@ -1,4 +1,6 @@
-import React from "react"
+import React from "react";
+import { connect } from "react-redux";
+import { signup } from "../actions/userActions";
 
 class Signup extends React.Component {
 
@@ -15,8 +17,6 @@ class Signup extends React.Component {
 	}
 
 	handleSubmit = event => {
-		event.preventDefault()
-
 		const userObj = {
 			user: {
 				username: this.state.username,
@@ -24,8 +24,8 @@ class Signup extends React.Component {
 			}
 		}
 
-		console.log(userObj)
-		
+		event.preventDefault();
+		this.props.signup(userObj);
 		this.setState({
 			username: "",
 			password: "",
@@ -74,4 +74,4 @@ class Signup extends React.Component {
 
 }
 
-export default Signup
+export default connect(null, { signup })(Signup)
