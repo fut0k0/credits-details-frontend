@@ -15,7 +15,16 @@ class Signup extends React.Component {
 	}
 
 	handleSubmit = event => {
-		event.preventDefault();
+		event.preventDefault()
+
+		const userObj = {
+			user: {
+				username: this.state.username,
+				password: this.state.password
+			}
+		}
+
+		console.log(userObj)
 		
 		this.setState({
 			username: "",
@@ -66,31 +75,3 @@ class Signup extends React.Component {
 }
 
 export default Signup
-
-
-/*
-			<div>
-				Login
-				<form onSubmit={this.handleSubmit}>
-					<label>
-						username:{" "}
-						<input
-							type="text"
-							name="username"
-							placeholder="(enter username)"
-							value={this.state.username}
-							onChange={this.handleChange} />
-					</label><br />
-					<label>
-						password:{" "}
-						<input
-							type="password"
-							name="password"
-							placeholder="(enter password)"
-							value={this.state.password}
-							onChange={this.handleChange} />
-					</label><br />
-					<input type="submit" />
-				</form>
-			</div>
-*/
