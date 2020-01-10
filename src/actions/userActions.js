@@ -9,8 +9,14 @@ const login = loginData => (
 			},
 			body: JSON.stringify(loginData)
 		})
-			.then(resp => resp.json())
-			.then(userData => console.log(userData))
+		.then(resp => resp.json())
+		.then(userData => {
+			if (!userData.message) {
+				dispatch({type: "SET_CURRENT_USER", payload: userData})
+			} else {
+				alert(userData.message)
+			}
+		})
 	}
 )
 
