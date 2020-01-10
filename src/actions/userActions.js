@@ -33,7 +33,11 @@ const signup = signupData => (
 		})
 		.then(resp => resp.json())
 		.then(userData => {
-			console.log(userData)
+			if (!Array.isArray(userData.username)) {
+				dispatch({type: "SET_CURRENT_USER", payload: userData})
+			} else {
+				alert(userData.username[0])
+			}
 		})
 	}
 )
