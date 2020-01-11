@@ -47,14 +47,10 @@ const logout = () => (
 		fetch("http://localhost:3000/api/v1/logout", {
 			method: "DELETE",
 			credentials: "include",
-			headers: {
-				"Accept": "application/json"
-			}
+			headers: {"Accept": "application/json"}
 		})
 		.then(resp => resp.json())
-		.then(data => {
-			alert(data.message)
-		})
+		.then(data => dispatch({type: "CLEAR_CURRENT_USER"}))
 	}
 )
 
