@@ -44,7 +44,17 @@ const signup = signupData => (
 
 const logout = () => (
 	dispatch => {
-		console.log("logout")
+		fetch("http://localhost:3000/api/v1/logout", {
+			method: "DELETE",
+			credentials: "include",
+			headers: {
+				"Accept": "application/json"
+			}
+		})
+		.then(resp => resp.json())
+		.then(data => {
+			alert(data.message)
+		})
 	}
 )
 
