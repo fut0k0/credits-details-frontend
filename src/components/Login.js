@@ -47,7 +47,8 @@ class Login extends React.Component {
 							value={this.state.password}
 							onChange={this.handleChange} />
 					</label><br />
-					<input type="submit" />
+					{this.state.username && this.state.password
+						? <input type="submit" /> : <input type="submit" disabled="disabled" />}
 				</form>
 			</div>
 		)
