@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Logout from "./components/Logout";
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 			App
 			<Login />
 			<Signup />
+			<Logout />
 		</div>
 	)
 }
