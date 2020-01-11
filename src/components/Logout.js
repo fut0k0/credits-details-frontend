@@ -1,9 +1,12 @@
-import React from "react"
+import React from "react";
+import { connect } from "react-redux";
+import { logout } from "../actions/userActions";
 
-const Logout = () => (
+const Logout = props => (
 	<div>
-		Logout
+		Logout<br />
+		<button onClick={props.logout}>Log out</button>
 	</div>
 )
 
-export default Logout
+export default connect(null, { logout })(Logout)

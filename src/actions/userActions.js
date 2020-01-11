@@ -42,4 +42,10 @@ const signup = signupData => (
 	}
 )
 
-export { login, signup }
+const logout = () => (
+	dispatch => {
+		console.log("logout")
+	}
+)
+
+export { login, signup, logout }
