@@ -54,4 +54,22 @@ const logout = () => (
 	}
 )
 
-export { login, signup, logout }
+const getCurrentUser = () => (
+	dispatch => {
+		fetch("http://localhost:3000/api/v1/getcurrentuser", {
+			method: "GET",
+			credentials: "include",
+			headers: {"Accept": "application/json"}
+		})
+		.then(resp => resp.json())
+		.then(userData => {
+			if (!userData.message) {
+				dispatch({type: "SET_CURRENT_USER", payload: userData})
+			} else {
+				alert(userData.message)
+			}
+		})
+	}
+)
+
+export { login, signup, logout, getCurrentUser }
