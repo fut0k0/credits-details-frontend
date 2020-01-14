@@ -1,9 +1,15 @@
 import React from "react";
+import { connect } from "react-redux";
+import { getCurrentUser } from "./actions/userActions";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Logout from "./components/Logout";
 
 class App extends React.Component {
+
+	componentDidMount() {
+		this.props.getCurrentUser()
+	}
 
 	render() {
 		return (
@@ -18,4 +24,4 @@ class App extends React.Component {
 
 }
 
-export default App
+export default connect(null, { getCurrentUser })(App)
