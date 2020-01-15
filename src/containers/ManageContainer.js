@@ -1,10 +1,10 @@
 import React from "react";
 import Logout from "../components/Logout";
 
-const ManageContainer = () => {
+const ManageContainer = props => {
 	return (
 		<div>
-			<Logout /><br />
+			<Logout history={props.history} /><br />
 			Manage
 		</div>
 	)

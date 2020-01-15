@@ -44,7 +44,7 @@ const signup = (signupData, history) => (
 	}
 )
 
-const logout = () => (
+const logout = history => (
 	dispatch => {
 		fetch("http://localhost:3000/api/v1/logout", {
 			method: "DELETE",
@@ -54,6 +54,7 @@ const logout = () => (
 		.then(resp => resp.json())
 		.then(data => {
 			dispatch({type: "CLEAR_CURRENT_USER"});
+			history.push("/");
 		})
 	}
 )
