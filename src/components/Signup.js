@@ -25,7 +25,7 @@ class Signup extends React.Component {
 		}
 
 		event.preventDefault();
-		this.props.signup(userObj);
+		this.props.signup(userObj, this.props.history);
 		this.setState({
 			username: "",
 			password: "",

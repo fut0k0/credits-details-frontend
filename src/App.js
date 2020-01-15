@@ -2,11 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route } from "react-router-dom";
 import { getCurrentUser } from "./actions/userActions";
+import HomeContainer from "./containers/HomeContainer";
 import ManageContainer from "./containers/ManageContainer";
 import DrillContainer from "./containers/DrillContainer";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import Logout from "./components/Logout";
 
 class App extends React.Component {
 
@@ -18,9 +16,7 @@ class App extends React.Component {
 		return (
 			<div>
 				App<br /><br />
-				<Login /><br />
-				<Signup /><br />
-				<Logout /><br />
+				<Route path="/" exact component={HomeContainer} />
 				<Route path="/manage" exact component={ManageContainer} />
 				<Route path="/drill" exact component={DrillContainer} />
 			</div>

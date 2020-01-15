@@ -1,4 +1,4 @@
-const login = loginData => (
+const login = (loginData, history) => (
 	dispatch => {
 		fetch("http://localhost:3000/api/v1/login", {
 			method: "POST",
@@ -12,7 +12,8 @@ const login = loginData => (
 		.then(resp => resp.json())
 		.then(userData => {
 			if (!userData.message) {
-				dispatch({type: "SET_CURRENT_USER", payload: userData})
+				dispatch({type: "SET_CURRENT_USER", payload: userData});
+				history.push("/drill");
 			} else {
 				alert(userData.message)
 			}
@@ -20,7 +21,7 @@ const login = loginData => (
 	}
 )
 
-const signup = signupData => (
+const signup = (signupData, history) => (
 	dispatch => {
 		fetch("http://localhost:3000/api/v1/signup", {
 			method: "POST",
@@ -34,7 +35,8 @@ const signup = signupData => (
 		.then(resp => resp.json())
 		.then(userData => {
 			if (!userData.message) {
-				dispatch({type: "SET_CURRENT_USER", payload: userData})
+				dispatch({type: "SET_CURRENT_USER", payload: userData});
+				history.push("/manage");
 			} else {
 				alert(userData.message)
 			}
@@ -50,7 +52,9 @@ const logout = () => (
 			headers: {"Accept": "application/json"}
 		})
 		.then(resp => resp.json())
-		.then(data => dispatch({type: "CLEAR_CURRENT_USER"}))
+		.then(data => {
+			dispatch({type: "CLEAR_CURRENT_USER"});
+		})
 	}
 )
 
