@@ -1,13 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
+import HomeContainer from "./HomeContainer";
 import Logout from "../components/Logout";
 
 const ManageContainer = props => {
-	return (
-		<div>
-			<Logout history={props.history} /><br />
-			Manage
-		</div>
-	)
+	if (!props.currentUser) {
+		return <HomeContainer history={props.history} />
+	} else {
+		return (
+			<div>
+				<Logout history={props.history} /><br />
+				Manage
+			</div>
+		)
+	}
 }
 
-export default ManageContainer
+export default connect(({ currentUser }) => ({ currentUser }))(ManageContainer)
