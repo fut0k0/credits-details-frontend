@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+import HomeContainer from "./HomeContainer";
 import Logout from "../components/Logout";
 
 const DrillContainer = props => {
 	if (!props.currentUser) {
-		return null
+		return <HomeContainer history={props.history} />
 	} else {
 		return (
 			<div>
