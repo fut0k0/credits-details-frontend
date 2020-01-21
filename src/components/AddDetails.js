@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getEngineersAll } from "../actions/detailsActions";
-import { addEngineer } from "../actions/detailsActions";
+import { getAttributeAll, addProducer, addEngineer } from "../actions/detailsActions";
 
 class AddDetails extends React.PureComponent {
 
@@ -10,7 +9,8 @@ class AddDetails extends React.PureComponent {
 	}
 
 	componentDidMount() {
-		this.props.getEngineersAll()
+		this.props.getAttributeAll("producers");
+		this.props.getAttributeAll("engineers");
 	}
 
 	handleChange = event => {
@@ -50,4 +50,4 @@ class AddDetails extends React.PureComponent {
 
 }
 
-export default connect(null, { getEngineersAll, addEngineer })(AddDetails)
+export default connect(null, { getAttributeAll, addProducer, addEngineer })(AddDetails)

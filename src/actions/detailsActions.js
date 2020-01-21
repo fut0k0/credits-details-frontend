@@ -1,30 +1,19 @@
-const getProducersAll = () => (
-	dispatch => {
-		fetch("http://localhost:3000/api/v1/producers", {
-			method: "GET",
-			credentials: "include",
-			headers: {"Accept": "application/json"}
-		})
-		.then(resp => resp.json())
-		.then(producerData => dispatch({type: "SET_PRODUCERS_ALL", payload: producerData}))
-	}
-)
-
-
-
-const getEngineersAll = () => (
-	dispatch => {
-		fetch("http://localhost:3000/api/v1/engineers", {
-			method: "GET",
-			credentials: "include",
-			headers: {"Accept": "application/json"}
-		})
-		.then(resp => resp.json())
-		.then(engineerData => dispatch({type: "SET_ENGINEERS_ALL", payload: engineerData}))
-	}
-)
-
-
+const getAttributeAll = attribute => {
+	const url = "http://localhost:3000/api/v1/" + attribute;
+	const type = "SET_" + attribute.toUpperCase() + "_ALL";
+	
+	return (
+		dispatch => {
+			fetch(url, {
+				method: "GET",
+				credentials: "include",
+				headers: {"Accept": "application/json"}
+			})
+			.then(resp => resp.json())
+			.then(attributeData => dispatch({type, payload: attributeData}))
+		}
+	)
+}
 
 const addProducer = producerData => (
 	dispatch => {
@@ -72,4 +61,4 @@ const addEngineer = engineerData => (
 	}
 )
 
-export { getProducersAll, getEngineersAll, addProducer, addEngineer }
+export { getAttributeAll, addProducer, addEngineer }
