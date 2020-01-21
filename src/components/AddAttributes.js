@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getAttributeAll, addAttribute } from "../actions/detailsActions";
+import { getAttributeAll, addAttribute } from "../actions/attributesActions";
 import AttributeForm from "./AttributeForm";
 
 class AddAttributes extends React.PureComponent {
@@ -10,6 +10,7 @@ class AddAttributes extends React.PureComponent {
 		engineer: ""
 	}
 
+// will probably move these to parent container at some point
 	componentDidMount() {
 		this.props.getAttributeAll("producers");
 		this.props.getAttributeAll("engineers");
