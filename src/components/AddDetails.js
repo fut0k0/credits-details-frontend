@@ -19,11 +19,14 @@ class AddDetails extends React.PureComponent {
 		})
 	}
 
-	handleSubmit = event => {
+	handleSubmit = (event, attribute) => {
+		const obj = {}
+
 		event.preventDefault();
-		this.props.addAttribute("engineer", {engineer: {name: this.state.engineer}});
+		obj[attribute] = {name: this.state[attribute]};
+		this.props.addAttribute(attribute, obj);
 		this.setState({
-			engineer: ""
+			[attribute]: ""
 		});
 	}
 
@@ -31,7 +34,7 @@ class AddDetails extends React.PureComponent {
 		return (
 			<div>
 				Add Details<br /><br />
-				<form onSubmit={this.handleSubmit}>
+				<form onSubmit={event => this.handleSubmit(event, "engineer")}>
 					<label>
 						Engineer:{" "}
 						<input
