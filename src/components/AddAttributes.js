@@ -1,10 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAttributeAll, addAttribute } from "../actions/detailsActions";
+import AttributeForm from "./AttributeForm";
 
-class AddDetails extends React.PureComponent {
+class AddAttributes extends React.PureComponent {
 
 	state = {
+		producer: "",
 		engineer: ""
 	}
 
@@ -33,24 +35,21 @@ class AddDetails extends React.PureComponent {
 	render() {
 		return (
 			<div>
-				Add Details<br /><br />
-				<form onSubmit={event => this.handleSubmit(event, "engineer")}>
-					<label>
-						Engineer:{" "}
-						<input
-							type="text"
-							name="engineer"
-							placeholder="(enter name)"
-							value={this.state.engineer}
-							onChange={this.handleChange} />
-					</label>{" "}
-					{this.state.engineer ? <input type="submit" />
-						: <input type="submit" disabled="disabled" />}
-				</form>
+				Add Attributes<br /><br />
+				<AttributeForm
+					attribute={"producer"}
+					value={this.state.producer}
+					onChange={this.handleChange}
+					onSubmit={this.handleSubmit} />
+				<AttributeForm
+					attribute={"engineer"}
+					value={this.state.engineer}
+					onChange={this.handleChange}
+					onSubmit={this.handleSubmit} />
 			</div>
 		)
 	}
 
 }
 
-export default connect(null, { getAttributeAll, addAttribute })(AddDetails)
+export default connect(null, { getAttributeAll, addAttribute })(AddAttributes)
