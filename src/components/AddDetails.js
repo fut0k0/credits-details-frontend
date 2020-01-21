@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getAttributeAll, addProducer, addEngineer } from "../actions/detailsActions";
+import { getAttributeAll, addAttribute } from "../actions/detailsActions";
 
 class AddDetails extends React.PureComponent {
 
@@ -21,7 +21,7 @@ class AddDetails extends React.PureComponent {
 
 	handleSubmit = event => {
 		event.preventDefault();
-		this.props.addEngineer({engineer: {name: this.state.engineer}});
+		this.props.addAttribute("engineer", {engineer: {name: this.state.engineer}});
 		this.setState({
 			engineer: ""
 		});
@@ -50,4 +50,4 @@ class AddDetails extends React.PureComponent {
 
 }
 
-export default connect(null, { getAttributeAll, addProducer, addEngineer })(AddDetails)
+export default connect(null, { getAttributeAll, addAttribute })(AddDetails)
