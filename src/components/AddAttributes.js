@@ -7,6 +7,7 @@ class AddAttributes extends React.PureComponent {
 
 	state = {
 		artist: "",
+		year: "",
 		genre: "",
 		producer: "",
 		mixer: "",
@@ -16,6 +17,7 @@ class AddAttributes extends React.PureComponent {
 // will probably move these to parent container at some point
 	componentDidMount() {
 		this.props.getAttributeAll("artists");
+		this.props.getAttributeAll("years");
 		this.props.getAttributeAll("genres");
 		this.props.getAttributeAll("producers");
 		this.props.getAttributeAll("mixers");
@@ -46,6 +48,11 @@ class AddAttributes extends React.PureComponent {
 				<AttributeForm
 					attribute={"artist"}
 					value={this.state.artist}
+					onChange={this.handleChange}
+					onSubmit={this.handleSubmit} />
+				<AttributeForm
+					attribute={"year"}
+					value={this.state.year}
 					onChange={this.handleChange}
 					onSubmit={this.handleSubmit} />
 				<AttributeForm
