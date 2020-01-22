@@ -1,31 +1,31 @@
 import React from "react"
 
-const loadSubmitButton = props => {
+const loadSubmitButton = (attribute, value) => {
 	const enabledButton = <input type="submit" />;
 	const disabledButton = <input type="submit" disabled="disabled" />;
 	
-	if (!props.value) {
+	if (!value) {
 		return disabledButton
-	} else if (props.attribute !== "year" ) {
+	} else if (attribute !== "year" ) {
 		return enabledButton
 	} else {
-		return (parseInt(props.value, 10).toString().length === 4 ? enabledButton : disabledButton)
+		return (parseInt(value, 10).toString().length === 4 ? enabledButton : disabledButton)
 	}
 }
 
-const AttributeForm = props => (
+const AttributeForm = ({ onSubmit, onChange, attribute, value }) => (
 	<div>
-		<form onSubmit={event => {props.onSubmit(event, props.attribute)}}>
+		<form onSubmit={event => {onSubmit(event, attribute)}}>
 			<label>
-				{props.attribute[0].toUpperCase() + props.attribute.substring(1) + ": "}
+				{attribute[0].toUpperCase() + attribute.substring(1) + ": "}
 				<input
 					type="text"
-					name={props.attribute}
-					placeholder={props.attribute === "year" ? "(enter 4 digit year)" : "(enter name)"}
-					value={props.value}
-					onChange={props.onChange} />
+					name={attribute}
+					placeholder={attribute === "year" ? "(enter 4 digit year)" : "(enter name)"}
+					value={value}
+					onChange={onChange} />
 			</label>{" "}
-			{loadSubmitButton(props)}
+			{loadSubmitButton(attribute, value)}
 		</form>
 	</div>
 )
