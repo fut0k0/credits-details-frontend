@@ -1,14 +1,28 @@
 import React from "react";
 import { connect } from "react-redux";
+import { getAttributeAll } from "../actions/attributesActions";
 
 class AddAlbum extends React.PureComponent {
 
 	state = {
 		title: "",
-		format: "(N/A)"
+		format: "(N/A)",
+		artist_id: "",
+		year_id: "",
+		genre_id: "",
+		producer_id: "",
+		mixer_id: "",
+		engineer_id: ""
 	}
 
-// add componentDidMount & retrieve data
+	componentDidMount() {
+		this.props.getAttributeAll("artists");
+		this.props.getAttributeAll("years");
+		this.props.getAttributeAll("genres");
+		this.props.getAttributeAll("producers");
+		this.props.getAttributeAll("mixers");
+		this.props.getAttributeAll("engineers");
+	}
 
 	handleChange = event => {
 		this.setState({
@@ -19,8 +33,7 @@ class AddAlbum extends React.PureComponent {
 	handleSubmit = event => {
 		const formData = {
 			album: {
-				title: this.state.title,
-				format: this.state.format,
+				...this.state,
 				user_id: this.props.currentUser.id
 			}
 		}
@@ -29,14 +42,20 @@ class AddAlbum extends React.PureComponent {
 		console.log(formData);
 		this.setState({
 			title: "",
-			format: "(N/A)"
+			format: "(N/A)",
+			artist_id: "",
+			year_id: "",
+			genre_id: "",
+			producer_id: "",
+			mixer_id: "",
+			engineer_id: ""
 		});
 	}
 
 	render() {
 		return (
 			<div>
-				AddAlbum<br /><br />
+				Add Album<br /><br />
 				<form onSubmit={this.handleSubmit}>
 					<label>
 						Title:{" "}
@@ -61,7 +80,7 @@ class AddAlbum extends React.PureComponent {
 							<option value="stream">stream</option>
 							<option value="vinyl">vinyl</option>
 						</select>
-					</label>
+					</label><br />
 					<input type="submit" />
 				</form>
 			</div>
@@ -70,4 +89,4 @@ class AddAlbum extends React.PureComponent {
 
 }
 
-export default connect(({ currentUser }) => ({ currentUser }))(AddAlbum)
+export default connect(({ currentUser }) => ({ currentUser }), { getAttributeAll })(AddAlbum)

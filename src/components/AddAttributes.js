@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getAttributeAll, addAttribute } from "../actions/attributesActions";
+import { addAttribute } from "../actions/attributesActions";
 import AttributeForm from "./AttributeForm";
 
 class AddAttributes extends React.PureComponent {
@@ -12,16 +12,6 @@ class AddAttributes extends React.PureComponent {
 		producer: "",
 		mixer: "",
 		engineer: ""
-	}
-
-// will probably move these to parent container at some point
-	componentDidMount() {
-		this.props.getAttributeAll("artists");
-		this.props.getAttributeAll("years");
-		this.props.getAttributeAll("genres");
-		this.props.getAttributeAll("producers");
-		this.props.getAttributeAll("mixers");
-		this.props.getAttributeAll("engineers");
 	}
 
 	handleChange = event => {
@@ -81,4 +71,4 @@ class AddAttributes extends React.PureComponent {
 
 }
 
-export default connect(null, { getAttributeAll, addAttribute })(AddAttributes)
+export default connect(null, { addAttribute })(AddAttributes)
