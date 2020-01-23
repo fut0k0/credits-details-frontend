@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
 import Logout from "../components/Logout";
+import AddAlbum from "../components/AddAlbum";
 import AddAttributes from "../components/AddAttributes";
 
 const ManageContainer = props => {
@@ -12,6 +13,7 @@ const ManageContainer = props => {
 			<div>
 				<Logout history={props.history} /><br />
 				Manage<br /><br />
+				<AddAlbum /><br />
 				<AddAttributes />
 			</div>
 		)
