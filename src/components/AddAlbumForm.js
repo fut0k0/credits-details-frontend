@@ -8,7 +8,7 @@ class AddAlbumForm extends React.PureComponent {
 
 	state = {
 		title: "",
-		format: "(N/A)",
+		format: "",
 		artist_id: "",
 		year_id: "",
 		genre_id: "",

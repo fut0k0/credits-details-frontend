@@ -1,11 +1,25 @@
 import React from "react"
 
-const listOptions = data => (
-	data.map(datum => <option key={datum.id} value={datum.id}>{datum.name}</option>)
-)
+const listOptions = data => {
+	let list = []
 
-// try to get <option value="" defaultselected="true" hidden={true}>(select value)</option> to display as first item in array
-// maybe try to add key to above statement (which works on its own)
+	data.sort((a, b) => {
+		const nameA = a.name.toUpperCase();
+		const nameB = b.name.toUpperCase();
+		
+		if (nameA < nameB) {
+			return -1
+		} else if (nameA > nameB) {
+			return 1
+		} else {
+			return 0
+		}
+	})
+
+	list = data.map(datum => <option key={datum.id} value={datum.id}>{datum.name}</option>);
+	list.unshift(<option key="default" value="" defaultselected="true" hidden={true}>(select value)</option>);
+	return list;
+}
 
 const AlbumFormItem = ({ onChange, item, value, data }) => (
 	<label>
