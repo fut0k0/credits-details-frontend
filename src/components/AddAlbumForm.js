@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAttributeAll } from "../actions/attributesActions";
+import AlbumFormItem from "./AlbumFormItem";
 
-class AddAlbum extends React.PureComponent {
+class AddAlbumForm extends React.PureComponent {
 
 	state = {
 		title: "",
@@ -66,22 +67,8 @@ class AddAlbum extends React.PureComponent {
 							value={this.state.title}
 							onChange={this.handleChange} />
 					</label><br />
-					<label>
-						Format:{" "}
-						<select
-							name="format"
-							value={this.state.format}
-							onChange={this.handleChange}>
-							<option value="(N/A)">(N/A)</option>
-							<option value="disc">disc</option>
-							<option value="digital">digital</option>
-							<option value="cassette">cassette</option>
-							<option value="other">other</option>
-							<option value="stream">stream</option>
-							<option value="vinyl">vinyl</option>
-						</select>
-					</label><br />
-					<input type="submit" />
+					<AlbumFormItem item={"format"} value={this.state.format} onChange={this.handleChange} />
+					<input type="submit" /><br /><br />
 				</form>
 			</div>
 		)
@@ -89,4 +76,4 @@ class AddAlbum extends React.PureComponent {
 
 }
 
-export default connect(({ currentUser }) => ({ currentUser }), { getAttributeAll })(AddAlbum)
+export default connect(({ currentUser }) => ({ currentUser }), { getAttributeAll })(AddAlbumForm)
