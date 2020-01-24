@@ -25,7 +25,7 @@ const AlbumFormItem = ({ onChange, item, value, data }) => (
 	<label>
 		{item[0].toUpperCase() + item.substring(1) + ": "}
 		<select
-			name={item}
+			name={item === "format" ? item : item + "_id"}
 			value={value}
 			onChange={onChange} >
 			{listOptions(data)}

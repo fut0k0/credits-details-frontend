@@ -44,7 +44,7 @@ class AddAlbumForm extends React.PureComponent {
 		console.log(formData);
 		this.setState({
 			title: "",
-			format: "(N/A)",
+			format: "",
 			artist_id: "",
 			year_id: "",
 			genre_id: "",
@@ -73,6 +73,36 @@ class AddAlbumForm extends React.PureComponent {
 						data={FormatsData}
 						value={this.state.format}
 						onChange={this.handleChange} /><br />
+					<AlbumFormItem
+						item={"artist"}
+						data={this.props.artistsAll}
+						value={this.state.artist_id}
+						onChange={this.handleChange} /><br />
+					<AlbumFormItem
+						item={"year"}
+						data={this.props.yearsAll}
+						value={this.state.year_id}
+						onChange={this.handleChange} /><br />
+					<AlbumFormItem
+						item={"genre"}
+						data={this.props.genresAll}
+						value={this.state.genre_id}
+						onChange={this.handleChange} /><br />
+					<AlbumFormItem
+						item={"producer"}
+						data={this.props.producersAll}
+						value={this.state.producer_id}
+						onChange={this.handleChange} /><br />
+					<AlbumFormItem
+						item={"mixer"}
+						data={this.props.mixersAll}
+						value={this.state.mixer_id}
+						onChange={this.handleChange} /><br />
+					<AlbumFormItem
+						item={"engineer"}
+						data={this.props.engineersAll}
+						value={this.state.engineer_id}
+						onChange={this.handleChange} /><br />
 					<input type="submit" /><br /><br />
 				</form>
 			</div>
@@ -81,4 +111,14 @@ class AddAlbumForm extends React.PureComponent {
 
 }
 
-export default connect(({ currentUser }) => ({ currentUser }), { getAttributeAll })(AddAlbumForm)
+const mapStateToProps = state => ({
+	currentUser: state.currentUser,
+	artistsAll: state.artistsAll,
+	yearsAll: state.yearsAll,
+	genresAll: state.genresAll,
+	producersAll: state.producersAll,
+	mixersAll: state.mixersAll,
+	engineersAll: state.engineersAll
+})
+
+export default connect(mapStateToProps, { getAttributeAll })(AddAlbumForm)
