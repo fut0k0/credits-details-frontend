@@ -1,7 +1,7 @@
 import React from "react"
 
 const listOptions = data => (
-	data.map(datum => <option key={datum.id} value={datum.name}>{datum.name}</option>)
+	data.map(datum => <option key={datum.id} value={datum.id}>{datum.name}</option>)
 )
 
 // try to get <option value="" defaultselected="true" hidden={true}>(select value)</option> to display as first item in array

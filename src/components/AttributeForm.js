@@ -14,20 +14,18 @@ const loadSubmitButton = (attribute, value) => {
 }
 
 const AttributeForm = ({ onSubmit, onChange, attribute, value }) => (
-	<div>
-		<form onSubmit={event => {onSubmit(event, attribute)}}>
-			<label>
-				{attribute[0].toUpperCase() + attribute.substring(1) + ": "}
-				<input
-					type="text"
-					name={attribute}
-					placeholder={attribute === "year" ? "(enter 4 digit year)" : "(enter name)"}
-					value={value}
-					onChange={onChange} />
-			</label>{" "}
-			{loadSubmitButton(attribute, value)}
-		</form>
-	</div>
+	<form onSubmit={event => {onSubmit(event, attribute)}}>
+		<label>
+			{attribute[0].toUpperCase() + attribute.substring(1) + ": "}
+			<input
+				type="text"
+				name={attribute}
+				placeholder={attribute === "year" ? "(enter 4 digit year)" : "(enter name)"}
+				value={value}
+				onChange={onChange} />
+		</label>{" "}
+		{loadSubmitButton(attribute, value)}
+	</form>
 )
 
 export default AttributeForm

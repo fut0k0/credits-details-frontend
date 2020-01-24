@@ -1,11 +1,11 @@
 const FormatsData = [
-	{id: 1, name: "(N/A)"},
-	{id: 2, name: "cassette"},
-	{id: 3, name: "digital"},
-	{id: 4, name: "disc"},
-	{id: 5, name: "other"},
-	{id: 6, name: "stream"},
-	{id: 7, name: "vinyl"},
+	{id: "(N/A)", name: "(N/A)"},
+	{id: "cassette", name: "cassette"},
+	{id: "digital", name: "digital"},
+	{id: "disc", name: "disc"},
+	{id: "other", name: "other"},
+	{id: "stream", name: "stream"},
+	{id: "vinyl", name: "vinyl"},
 ]
 
 export default FormatsData
