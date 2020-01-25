@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAttributeAll } from "../actions/attributesActions";
+import { addAlbum } from "../actions/albumActions";
 import AlbumFormItem from "./AlbumFormItem";
 import FormatsData from "./FormatsData";
 
@@ -41,7 +42,7 @@ class AddAlbumForm extends React.PureComponent {
 		}
 
 		event.preventDefault();
-		console.log(formData);
+		this.props.addAlbum(formData);
 		this.setState({
 			title: "",
 			format: "",
@@ -121,4 +122,4 @@ const mapStateToProps = state => ({
 	engineersAll: state.engineersAll
 })
 
-export default connect(mapStateToProps, { getAttributeAll })(AddAlbumForm)
+export default connect(mapStateToProps, { getAttributeAll, addAlbum })(AddAlbumForm)
