@@ -27,6 +27,10 @@ class AddAlbumForm extends React.PureComponent {
 		this.props.getAttributeAll("engineers");
 	}
 
+	validateFormData = () => (
+		this.state.title && this.state.format && this.state.artist_id && this.state.year_id && this.state.genre_id && this.state.producer_id && this.state.mixer_id && this.state.engineer_id ? true : false
+	)
+
 	handleChange = event => {
 		this.setState({
 			[event.target.name]: event.target.value
@@ -104,7 +108,7 @@ class AddAlbumForm extends React.PureComponent {
 						data={this.props.engineersAll}
 						value={this.state.engineer_id}
 						onChange={this.handleChange} /><br />
-					<input type="submit" /><br /><br />
+					{this.validateFormData() ? <input type="submit" /> : <input type="submit" disabled="disabled" />}<br /><br />
 				</form>
 			</div>
 		)
