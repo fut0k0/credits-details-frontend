@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
+import ShowAlbums from "./ShowAlbums";
 import Logout from "../components/Logout";
 import AddAlbumForm from "../components/AddAlbumForm";
 import AddAttributes from "../components/AddAttributes";
@@ -14,7 +15,8 @@ const ManageContainer = props => {
 				<Logout history={props.history} /><br />
 				Manage<br /><br />
 				<AddAlbumForm /><br />
-				<AddAttributes />
+				<AddAttributes /><br />
+				<ShowAlbums albums={props.currentUser.albums} />
 			</div>
 		)
 	}
