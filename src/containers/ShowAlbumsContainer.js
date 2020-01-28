@@ -1,7 +1,7 @@
 import React from "react";
 import ShowAlbum from "../components/ShowAlbum";
 
-const ShowAlbums = ({ albums }) => {
+const ShowAlbumsContainer = ({ albums }) => {
 	albums.sort((a, b) => {
 		const titleA = a.title.toUpperCase();
 		const titleB = b.title.toUpperCase();
@@ -32,4 +32,4 @@ const ShowAlbums = ({ albums }) => {
 	)
 }
 
-export default ShowAlbums
+export default ShowAlbumsContainer

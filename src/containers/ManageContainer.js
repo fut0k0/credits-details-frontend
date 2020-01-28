@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
-import ShowAlbums from "./ShowAlbums";
+import ShowAlbumsContainer from "./ShowAlbumsContainer";
 import Logout from "../components/Logout";
 import AddAlbumForm from "../components/AddAlbumForm";
 import AddAttributes from "../components/AddAttributes";
@@ -16,7 +16,7 @@ const ManageContainer = props => {
 				Manage<br /><br />
 				<AddAlbumForm /><br />
 				<AddAttributes /><br />
-				<ShowAlbums albums={props.currentUser.albums} />
+				<ShowAlbumsContainer albums={props.currentUser.albums} />
 			</div>
 		)
 	}
