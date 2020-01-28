@@ -20,4 +20,10 @@ const addAlbum = data => (
 	}
 )
 
-export { addAlbum }
+const deleteAlbum = id => (
+	dispatch => {
+		console.log(id)
+	}
+)
+
+export { addAlbum, deleteAlbum }
