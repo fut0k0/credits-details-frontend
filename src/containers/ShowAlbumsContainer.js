@@ -1,7 +1,7 @@
 import React from "react";
 import ShowAlbum from "../components/ShowAlbum";
 
-const ShowAlbumsContainer = ({ albums }) => {
+const ShowAlbumsContainer = ({ albums, options }) => {
 	albums.sort((a, b) => {
 		const titleA = a.title.toUpperCase();
 		const titleB = b.title.toUpperCase();
@@ -27,7 +27,7 @@ const ShowAlbumsContainer = ({ albums }) => {
 	return (
 		<div>
 			Show Albums<br /><br />
-			{albums.map(album => <ShowAlbum key={album.id} album={album} />)}
+			{albums.map(album => <ShowAlbum key={album.id} album={album} options={options} />)}
 		</div>
 	)
 }

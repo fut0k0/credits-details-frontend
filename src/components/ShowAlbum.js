@@ -2,14 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { deleteAlbum } from "../actions/albumActions";
 
-const handleClick = (deleteAlbum, id) => deleteAlbum(id)
+const button = (deleteAlbum, id) => (
+	<button onClick={() => deleteAlbum(id)}>Delete</button>
+)
 
-const ShowAlbum = ({ deleteAlbum, album }) => (
+const ShowAlbum = ({ deleteAlbum, album, options }) => (
 	<div>
 		{album.title + " by " + album.artist.name + " "}
-		<button onClick={() => handleClick(deleteAlbum, album.id)}>
-			Delete
-		</button>
+		{options ? button(deleteAlbum, album.id) : null}
 	</div>
 )
 
