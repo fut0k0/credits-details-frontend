@@ -20,10 +20,26 @@ const addAlbum = data => (
 	}
 )
 
-const deleteAlbum = id => (
-	dispatch => {
-		console.log(id)
-	}
-)
+const deleteAlbum = id => {
+	const url = "http://localhost:3000/api/v1/albums/" + id
+
+	return (
+		dispatch => {
+			fetch(url, {
+				method: "DELETE",
+				credentials: "include",
+				headers: {"Accept": "application/json"}
+			})
+			.then(resp => resp.json())
+			.then(data => {
+				if (data.message === "Album deleted") {
+					dispatch({type: "DELETE_ALBUM", payload: id})
+				} else {
+					alert("Error occurred")
+				}
+			})
+		}
+	)
+}
 
 export { addAlbum, deleteAlbum }
