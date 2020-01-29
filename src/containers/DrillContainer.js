@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
+import FiltersContainer from "./FiltersContainer";
+import ShowAlbumsContainer from "./ShowAlbumsContainer";
 import Logout from "../components/Logout";
 
 const DrillContainer = props => {
@@ -10,10 +12,14 @@ const DrillContainer = props => {
 		return (
 			<div>
 				<Logout history={props.history} /><br />
-				Drill
+				Drill<br /><br />
+				<FiltersContainer /><br />
+				<ShowAlbumsContainer albums={props.currentUser.albums} options={false} />
 			</div>
 		)
 	}
 }
 
 export default connect(({ currentUser }) => ({ currentUser }))(DrillContainer)
+
+// think about connecting ShowAlbumsContainer instead of passing albums prop
