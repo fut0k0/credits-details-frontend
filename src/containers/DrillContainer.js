@@ -21,5 +21,3 @@ const DrillContainer = props => {
 }
 
 export default connect(({ currentUser }) => ({ currentUser }))(DrillContainer)
-
-// think about connecting ShowAlbumsContainer instead of passing albums prop

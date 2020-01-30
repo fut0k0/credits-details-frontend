@@ -34,3 +34,6 @@ const AlbumFormItem = ({ onChange, item, value, data }) => (
 )
 
 export default AlbumFormItem
+
+// check if it is okay to remove value in line 29, might not be needed
+// move the top option out of listOptions and into AlbumFormItem
