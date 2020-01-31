@@ -14,7 +14,7 @@ const DrillContainer = props => {
 				<Logout history={props.history} /><br />
 				Drill<br /><br />
 				<FiltersContainer /><br />
-				<ShowAlbumsContainer options={false} />
+				<ShowAlbumsContainer drill={true} />
 			</div>
 		)
 	}

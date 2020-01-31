@@ -2,8 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import ShowAlbum from "../components/ShowAlbum";
 
-const ShowAlbumsContainer = ({ currentUser, options }) => {
-	currentUser.albums.sort((a, b) => {
+const ShowAlbumsContainer = ({ currentUser, albumsFiltered, drill }) => {
+	let albums = []
+
+	drill ? albums = albumsFiltered : albums = currentUser.albums
+
+	albums.sort((a, b) => {
 		const titleA = a.title.toUpperCase();
 		const titleB = b.title.toUpperCase();
 
@@ -28,9 +32,9 @@ const ShowAlbumsContainer = ({ currentUser, options }) => {
 	return (
 		<div>
 			Show Albums<br /><br />
-			{currentUser.albums.map(album => <ShowAlbum key={album.id} album={album} options={options} />)}
+			{albums.map(album => <ShowAlbum key={album.id} album={album} drill={drill} />)}
 		</div>
 	)
 }
 
-export default connect(({ currentUser }) => ({ currentUser }))(ShowAlbumsContainer)
+export default connect(({ currentUser, albumsFiltered }) => ({ currentUser, albumsFiltered }))(ShowAlbumsContainer)

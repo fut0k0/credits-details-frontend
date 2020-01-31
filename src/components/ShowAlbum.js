@@ -6,10 +6,10 @@ const button = (deleteAlbum, id) => (
 	<button onClick={() => deleteAlbum(id)}>Delete</button>
 )
 
-const ShowAlbum = ({ deleteAlbum, album, options }) => (
+const ShowAlbum = ({ deleteAlbum, album, drill }) => (
 	<div>
 		{album.title + " by " + album.artist.name + " "}
-		{options ? button(deleteAlbum, album.id) : null}
+		{drill ? null : button(deleteAlbum, album.id)}
 	</div>
 )
 

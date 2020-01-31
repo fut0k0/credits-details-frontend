@@ -16,7 +16,7 @@ const ManageContainer = props => {
 				Manage<br /><br />
 				<AddAlbumForm /><br />
 				<AddAttributes /><br />
-				<ShowAlbumsContainer options={true} />
+				<ShowAlbumsContainer drill={false} />
 			</div>
 		)
 	}
