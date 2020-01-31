@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getAttributeAll } from "../actions/attributesActions";
 import { addAlbum } from "../actions/albumActions";
 import AlbumFormItem from "./AlbumFormItem";
-import FormatsData from "./FormatsData";
+import formatsData from "../data/formatsData";
 
 class AddAlbumForm extends React.PureComponent {
 
@@ -75,7 +75,7 @@ class AddAlbumForm extends React.PureComponent {
 					</label><br />
 					<AlbumFormItem
 						item={"format"}
-						data={FormatsData}
+						data={formatsData}
 						value={this.state.format}
 						onChange={this.handleChange} /><br />
 					<AlbumFormItem
