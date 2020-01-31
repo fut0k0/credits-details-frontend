@@ -27,4 +27,8 @@ export default connect(({ currentUser }) => ({ currentUser }))(FiltersContainer)
 // use if statement to check event.target.value and then update state
 // then get result to ShowAlbums somehow, or make ShowFilteredAlbums component
 // perhaps store filtered albums in store, then set flag in ShowAlbums render call and use conditions to all albums or filtered albums from store
+
 // possibly update other filters with relevant data once a filter is set
+// create local state to update artists, years, genres, etc. (every field for which there is a filter)
+// then update the local state based on the filter settings so that all other filters can update with the relevant values
+// send the updated data to each filter component

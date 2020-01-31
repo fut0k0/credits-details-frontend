@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import currentUser from "./userReducer";
+import albumsFiltered from "./albumsReducer";
 import artistsAll from "./artistsReducer";
 import yearsAll from "./yearsReducer";
 import genresAll from "./genresReducer";
@@ -10,6 +11,7 @@ import loading from "./loadingReducer";
 
 const rootReducer = combineReducers({
 	currentUser,
+	albumsFiltered,
 	artistsAll,
 	yearsAll,
 	genresAll,
