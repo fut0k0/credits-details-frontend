@@ -1,8 +1,6 @@
 import React from "react"
 
 const listOptions = data => {
-	let list = []
-
 	data.sort((a, b) => {
 		const nameA = a.name.toUpperCase();
 		const nameB = b.name.toUpperCase();
@@ -16,9 +14,7 @@ const listOptions = data => {
 		}
 	})
 
-	list = data.map(datum => <option key={datum.id} value={datum.id}>{datum.name}</option>);
-	list.unshift(<option key="default" value="" defaultselected="true" hidden={true}>(select value)</option>);
-	return list;
+	return data.map(datum => <option key={datum.id} value={datum.id}>{datum.name}</option>)
 }
 
 const AlbumFormItem = ({ onChange, item, value, data }) => (
@@ -28,6 +24,7 @@ const AlbumFormItem = ({ onChange, item, value, data }) => (
 			name={item === "format" ? item : item + "_id"}
 			value={value}
 			onChange={onChange} >
+			<option key="default" value="" hidden={true}>(select value)</option>
 			{listOptions(data)}
 		</select>
 	</label>
@@ -36,4 +33,3 @@ const AlbumFormItem = ({ onChange, item, value, data }) => (
 export default AlbumFormItem
 
 // check if it is okay to remove value in line 29, might not be needed
-// move the top option out of listOptions and into AlbumFormItem
