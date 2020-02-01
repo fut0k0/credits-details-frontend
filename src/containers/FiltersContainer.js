@@ -1,34 +1,43 @@
 import React from "react";
 import { connect } from "react-redux";
+import { loadUserAlbums, filterAlbums } from "../actions/albumsActions";
 import Filter from "../components/Filter";
 
-const FiltersContainer = ({ currentUser }) => {
-	const handleChange = event => {
-		let filteredAlbums = currentUser.albums
+class FiltersContainer extends React.Component {
 
+	handleChange = event => {
+		this.props.loadUserAlbums(this.props.currentUser.albums);
 		if (!!event.target.value) {
-			filteredAlbums = currentUser.albums.filter(album => album[event.target.name].id === parseInt(event.target.value))
+			this.props.filterAlbums(event.target.name, event.target.value)
 		};
-		console.log(filteredAlbums);
 	}
 
-	return (
-		<div>
-			Filters<br /><br />
-			<Filter onChange={handleChange} item={"artist"} data={currentUser.artists} />
-			<Filter onChange={handleChange} item={"year"} data={currentUser.years} />
-		</div>
-	)
+	componentDidMount() {
+		this.props.loadUserAlbums(this.props.currentUser.albums)
+	}
+
+	render() {
+		return (
+			<div>
+				Filters<br /><br />
+				<Filter
+					item={"artist"}
+					data={this.props.currentUser.artists}
+					onChange={this.handleChange} />
+				<Filter
+					item={"year"}
+					data={this.props.currentUser.years}
+					onChange={this.handleChange} />
+			</div>
+		)
+	}
+
 }
 
-export default connect(({ currentUser }) => ({ currentUser }))(FiltersContainer)
-
-// store filtered albums in local state or store and send to Filter as data prop
-// use if statement to check event.target.value and then update state
-// then get result to ShowAlbums somehow, or make ShowFilteredAlbums component
-// perhaps store filtered albums in store, then set flag in ShowAlbums render call and use conditions to all albums or filtered albums from store
+export default connect(({ currentUser }) => ({ currentUser }), ({ loadUserAlbums, filterAlbums }))(FiltersContainer)
 
 // possibly update other filters with relevant data once a filter is set
 // create local state to update artists, years, genres, etc. (every field for which there is a filter)
+// could possibly do it with something like local state = artistFilter = ***, yearFilter = ***, etc.
 // then update the local state based on the filter settings so that all other filters can update with the relevant values
 // send the updated data to each filter component
