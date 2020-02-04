@@ -5,7 +5,15 @@ import Filter from "../components/Filter";
 
 class FiltersContainer extends React.Component {
 
+	state = {
+		artist: "",
+		year: ""
+	}
+
 	handleChange = event => {
+		this.setState({
+			[event.target.name]: event.target.value
+		});
 		this.props.loadUserAlbums(this.props.currentUser.albums);
 		if (!!event.target.value) {
 			this.props.filterAlbums(event.target.name, event.target.value)
@@ -23,10 +31,12 @@ class FiltersContainer extends React.Component {
 				<Filter
 					item={"artist"}
 					data={this.props.currentUser.artists}
+					value={this.state.artist_id}
 					onChange={this.handleChange} />
 				<Filter
 					item={"year"}
 					data={this.props.currentUser.years}
+					value={this.state.year_id}
 					onChange={this.handleChange} />
 			</div>
 		)
