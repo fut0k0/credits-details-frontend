@@ -3,7 +3,15 @@ const albumsReducer = (state=[], action) => {
 		case "LOAD_USER_ALBUMS":
 			return action.payload
 		case "FILTER_ALBUMS":
-			return state.filter(album => album[action.payload.attribute].id === parseInt(action.payload.id))
+			let albumsFiltered = [...state]
+
+			if (!!action.payload.artist_id) {
+				albumsFiltered = albumsFiltered.filter(album => album.artist.id === parseInt(action.payload.artist_id))
+			};
+			if (!!action.payload.year_id) {
+				albumsFiltered = albumsFiltered.filter(album => album.year.id === parseInt(action.payload.year_id))
+			};
+			return albumsFiltered;
 		default:
 			return state
 	}
