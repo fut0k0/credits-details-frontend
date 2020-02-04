@@ -7,20 +7,24 @@ class FiltersContainer extends React.Component {
 
 	state = {
 		artist_id: "",
-		year_id: ""
+		year_id: "",
+		genre_id: "",
+		producer_id: "",
+		mixer_id: "",
+		engineer_id: ""
 	}
 
 	handleChange = event => {
 		this.setState({[event.target.name]: event.target.value})
 	}
 
+	componentDidMount() {
+		this.props.loadUserAlbums(this.props.currentUser.albums)
+	}
+
 	componentDidUpdate() {
 		this.props.loadUserAlbums(this.props.currentUser.albums);
 		this.props.filterAlbums(this.state);
-	}
-
-	componentDidMount() {
-		this.props.loadUserAlbums(this.props.currentUser.albums)
 	}
 
 	render() {
@@ -36,6 +40,26 @@ class FiltersContainer extends React.Component {
 					item={"year"}
 					data={this.props.currentUser.years}
 					value={this.state.year_id}
+					onChange={this.handleChange} />
+				<Filter
+					item={"genre"}
+					data={this.props.currentUser.genres}
+					value={this.state.genre_id}
+					onChange={this.handleChange} />
+				<Filter
+					item={"producer"}
+					data={this.props.currentUser.producers}
+					value={this.state.producer_id}
+					onChange={this.handleChange} />
+				<Filter
+					item={"mixer"}
+					data={this.props.currentUser.mixers}
+					value={this.state.mixer_id}
+					onChange={this.handleChange} />
+				<Filter
+					item={"engineer"}
+					data={this.props.currentUser.engineers}
+					value={this.state.engineer_id}
 					onChange={this.handleChange} />
 			</div>
 		)

@@ -4,7 +4,7 @@ import ListOptions from "./ListOptions";
 const Filter = ({ onChange, item, value, data }) => (	
 	<div>
 		<label>
-			{item[0].toUpperCase() + item.slice(1) + ": "}
+			{item[0].toUpperCase() + item.substring(1) + ": "}
 			<select
 				name={item + "_id"}
 				value={value}
