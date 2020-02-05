@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { getCurrentUser } from "../actions/userActions";
 import { loadUserAlbums, filterAlbums } from "../actions/albumsActions";
 import Filter from "../components/Filter";
 
@@ -34,7 +35,8 @@ class FiltersContainer extends React.PureComponent {
 	}
 
 	componentDidMount() {
-		this.props.loadUserAlbums(this.props.currentUser.albums)
+		this.props.getCurrentUser();
+		this.props.loadUserAlbums(this.props.currentUser.albums);
 	}
 
 	componentDidUpdate() {
@@ -93,4 +95,4 @@ class FiltersContainer extends React.PureComponent {
 
 }
 
-export default connect(({ currentUser }) => ({ currentUser }), ({ loadUserAlbums, filterAlbums }))(FiltersContainer)
+export default connect(({ currentUser }) => ({ currentUser }), ({ getCurrentUser, loadUserAlbums, filterAlbums }))(FiltersContainer)
