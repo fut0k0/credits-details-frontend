@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { login } from "../actions/userActions";
 
-class Login extends React.Component {
+class Login extends React.PureComponent {
 
 	state = {
 		username: "",

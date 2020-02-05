@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { loadUserAlbums, filterAlbums } from "../actions/albumsActions";
 import Filter from "../components/Filter";
 
-class FiltersContainer extends React.Component {
+class FiltersContainer extends React.PureComponent {
 
 	state = {
 		artist_id: "",
