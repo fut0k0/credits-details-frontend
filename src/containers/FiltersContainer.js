@@ -19,7 +19,18 @@ class FiltersContainer extends React.Component {
 	}
 
 	handleClick = event => {
-		this.setState({[event.target.name]: ""})
+		if (event.target.name !== "all" ) {
+			this.setState({[event.target.name]: ""})
+		} else {
+			this.setState({
+				artist_id: "",
+				year_id: "",
+				genre_id: "",
+				producer_id: "",
+				mixer_id: "",
+				engineer_id: ""
+			})
+		}
 	}
 
 	componentDidMount() {
@@ -35,6 +46,11 @@ class FiltersContainer extends React.Component {
 		return (
 			<div>
 				Filters<br /><br />
+				<button
+					name="all"
+					onClick={this.handleClick}>
+					Clear All
+				</button>
 				<Filter
 					item={"artist"}
 					data={this.props.currentUser.artists}
