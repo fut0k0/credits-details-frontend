@@ -68,9 +68,3 @@ class FiltersContainer extends React.Component {
 }
 
 export default connect(({ currentUser }) => ({ currentUser }), ({ loadUserAlbums, filterAlbums }))(FiltersContainer)
-
-// possibly update other filters with relevant data once a filter is set
-// create local state to update artists, years, genres, etc. (every field for which there is a filter)
-// could possibly do it with something like local state = artistFilter = ***, yearFilter = ***, etc.
-// then update the local state based on the filter settings so that all other filters can update with the relevant values
-// send the updated data to each filter component
