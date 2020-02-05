@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import ListOptions from "./ListOptions";
 
-const Filter = ({ albumsFiltered, onChange, item, value, data }) => {
+const Filter = ({ albumsFiltered, onChange, onClick, item, value, data }) => {
 	const itemIds = albumsFiltered.map(album => album[item].id)
 	const items = data.filter(datum => itemIds.includes(datum.id))
 
@@ -14,10 +14,15 @@ const Filter = ({ albumsFiltered, onChange, item, value, data }) => {
 					name={item + "_id"}
 					value={value}
 					onChange={onChange}>
-					<option key="default" value="">(clear)</option>
+					<option key="default" value="" hidden={true}>(select)</option>
 					{ListOptions(items)}
 				</select>
 			</label>
+			<button
+				name={item + "_id"}
+				onClick={onClick}>
+				Reset
+			</button>
 		</div>
 	)
 }
