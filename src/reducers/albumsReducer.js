@@ -2,7 +2,7 @@ const albumsReducer = (state=[], action) => {
 	switch (action.type) {
 		case "SET_USER_ALBUMS":
 			return action.payload
-		case "CLEAR_ALBUMS_FILTERED":
+		case "CLEAR_STORE":
 			return []
 		case "FILTER_ALBUMS":
 			let albumsFiltered = [...state]

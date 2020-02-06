@@ -4,7 +4,7 @@ const engineersReducer = (state=[], action) => {
 			return action.payload
 		case "ADD_ENGINEER":
 			return [...state, action.payload]
-		case "CLEAR_ENGINEERS_ALL":
+		case "CLEAR_STORE":
 			return []
 		default:
 			return state
