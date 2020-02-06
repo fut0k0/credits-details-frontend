@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
 import Logout from "../components/Logout";
+import Info from "../components/Info";
 
 const InfoContainer = props => {
 	if (!props.currentUser) {
@@ -10,7 +11,8 @@ const InfoContainer = props => {
 		return (
 			<div>
 				<Logout history={props.history} /><br />
-				Info
+				Info<br /><br />
+				<Info />
 			</div>
 		)
 	}
