@@ -54,7 +54,7 @@ const logout = history => (
 		.then(resp => resp.json())
 		.then(data => {
 			dispatch({type: "CLEAR_CURRENT_USER"});
-			dispatch({type: "CLEAR_FILTERED_ALBUMS"});
+			dispatch({type: "CLEAR_ALBUMS_FILTERED"});
 			dispatch({type: "CLEAR_ARTISTS_ALL"});
 			dispatch({type: "CLEAR_YEARS_ALL"});
 			dispatch({type: "CLEAR_GENRES_ALL"});
@@ -85,3 +85,5 @@ const getCurrentUser = () => (
 )
 
 export { login, signup, logout, getCurrentUser }
+
+// perhaps create single "CLEAR_STORE" action and only use dispatch once
