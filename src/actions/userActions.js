@@ -36,7 +36,7 @@ const signup = (signupData, history) => (
 		.then(userData => {
 			if (!userData.message) {
 				dispatch({type: "SET_CURRENT_USER", payload: userData});
-				history.push("/manage");
+				history.push("/info");
 			} else {
 				alert(userData.message)
 			}

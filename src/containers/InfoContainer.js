@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import HomeContainer from "../containers/HomeContainer";
-import Logout from "./Logout";
+import HomeContainer from "./HomeContainer";
+import Logout from "../components/Logout";
 
-const Info = props => {
+const InfoContainer = props => {
 	if (!props.currentUser) {
 		return <HomeContainer history={props.history} />
 	} else {
@@ -16,4 +16,4 @@ const Info = props => {
 	}
 }
 
-export default connect(({ currentUser }) => ({ currentUser }))(Info)
+export default connect(({ currentUser }) => ({ currentUser }))(InfoContainer)

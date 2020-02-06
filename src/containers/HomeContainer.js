@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import InfoContainer from "./InfoContainer";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
-import Info from "../components/Info";
 
 const HomeContainer = props => {
 	if (props.currentUser) {
-		return <Info history={props.history} />
+		return <InfoContainer history={props.history} />
 	} else {
 		return (
 			<div>
