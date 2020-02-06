@@ -4,6 +4,8 @@ const producersReducer = (state=[], action) => {
 			return action.payload
 		case "ADD_PRODUCER":
 			return [...state, action.payload]
+		case "CLEAR_PRODUCERS_ALL":
+			return []
 		default:
 			return state
 	}

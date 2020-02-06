@@ -4,6 +4,8 @@ const genresReducer = (state=[], action) => {
 			return action.payload
 		case "ADD_GENRE":
 			return [...state, action.payload]
+		case "CLEAR_GENRES_ALL":
+			return []
 		default:
 			return state
 	}

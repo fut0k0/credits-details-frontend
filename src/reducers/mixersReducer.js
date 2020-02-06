@@ -4,6 +4,8 @@ const mixersReducer = (state=[], action) => {
 			return action.payload
 		case "ADD_MIXER":
 			return [...state, action.payload]
+		case "CLEAR_MIXERS_ALL":
+			return []
 		default:
 			return state
 	}

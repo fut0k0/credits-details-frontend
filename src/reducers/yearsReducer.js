@@ -4,6 +4,8 @@ const yearsReducer = (state=[], action) => {
 			return action.payload
 		case "ADD_YEAR":
 			return [...state, action.payload]
+		case "CLEAR_YEARS_ALL":
+			return []
 		default:
 			return state
 	}

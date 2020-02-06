@@ -54,6 +54,13 @@ const logout = history => (
 		.then(resp => resp.json())
 		.then(data => {
 			dispatch({type: "CLEAR_CURRENT_USER"});
+			dispatch({type: "CLEAR_FILTERED_ALBUMS"});
+			dispatch({type: "CLEAR_ARTISTS_ALL"});
+			dispatch({type: "CLEAR_YEARS_ALL"});
+			dispatch({type: "CLEAR_GENRES_ALL"});
+			dispatch({type: "CLEAR_PRODUCERS_ALL"});
+			dispatch({type: "CLEAR_MIXERS_ALL"});
+			dispatch({type: "CLEAR_ENGINEERS_ALL"});
 			history.push("/");
 		})
 	}
