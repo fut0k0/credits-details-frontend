@@ -2,9 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import Logout from "./Logout";
 
-const Status = props => (
+const Status = ({ history, currentUser }) => (
 	<div>
-		Status
+		Status<br /><br />
+		Logged in as: {currentUser.username}<br /><br />
+		<Logout history={history} />
 	</div>
 )
 
