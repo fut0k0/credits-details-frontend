@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
 import FiltersContainer from "./FiltersContainer";
 import ShowAlbumsContainer from "./ShowAlbumsContainer";
-import Logout from "../components/Logout";
+import Status from "../components/Status";
+import Navigation from "../components/Navigation";
 
 const DrillContainer = props => {
 	if (!props.currentUser) {
@@ -11,7 +12,8 @@ const DrillContainer = props => {
 	} else {
 		return (
 			<div>
-				<Logout history={props.history} /><br />
+				<Status history={props.history} /><br />
+				<Navigation /><br />
 				Drill<br /><br />
 				<FiltersContainer /><br />
 				<ShowAlbumsContainer drill={true} />

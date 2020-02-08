@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
-import Logout from "../components/Logout";
+import Status from "../components/Status";
+import Navigation from "../components/Navigation";
 import Info from "../components/Info";
 
 const InfoContainer = props => {
@@ -10,7 +11,8 @@ const InfoContainer = props => {
 	} else {
 		return (
 			<div>
-				<Logout history={props.history} /><br />
+				<Status history={props.history} /><br />
+				<Navigation /><br />
 				Info<br /><br />
 				<Info />
 			</div>

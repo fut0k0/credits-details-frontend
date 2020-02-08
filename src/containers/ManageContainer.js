@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import HomeContainer from "./HomeContainer";
 import ShowAlbumsContainer from "./ShowAlbumsContainer";
-import Logout from "../components/Logout";
+import Status from "../components/Status";
+import Navigation from "../components/Navigation";
 import AddAlbumForm from "../components/AddAlbumForm";
 import AddAttributes from "../components/AddAttributes";
 
@@ -12,7 +13,8 @@ const ManageContainer = props => {
 	} else {
 		return (
 			<div>
-				<Logout history={props.history} /><br />
+				<Status history={props.history} /><br />
+				<Navigation /><br />
 				Manage<br /><br />
 				<AddAlbumForm /><br />
 				<AddAttributes /><br />
