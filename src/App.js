@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { getCurrentUser } from "./actions/userActions";
 import HomeContainer from "./containers/HomeContainer";
 import ManageContainer from "./containers/ManageContainer";
@@ -17,10 +17,12 @@ class App extends React.Component {
 		return (
 			<div>
 				App<br /><br />
-				<Route path="/" exact component={HomeContainer} />
-				<Route path="/manage" exact component={ManageContainer} />
-				<Route path="/drill" exact component={DrillContainer} />
-				<Route path="/info" exact component={InfoContainer} />
+				<Switch>
+					<Route path="/" exact component={HomeContainer} />
+					<Route path="/manage" exact component={ManageContainer} />
+					<Route path="/drill" exact component={DrillContainer} />
+					<Route path="/info" exact component={InfoContainer} />
+				</Switch>
 			</div>
 		)
 	}
