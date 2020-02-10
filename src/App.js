@@ -6,6 +6,7 @@ import HomeContainer from "./containers/HomeContainer";
 import ManageContainer from "./containers/ManageContainer";
 import DrillContainer from "./containers/DrillContainer";
 import InfoContainer from "./containers/InfoContainer";
+import NotFound from "./components/NotFound"
 
 class App extends React.Component {
 
@@ -22,6 +23,7 @@ class App extends React.Component {
 					<Route path="/manage" exact component={ManageContainer} />
 					<Route path="/drill" exact component={DrillContainer} />
 					<Route path="/info" exact component={InfoContainer} />
+					<Route component={NotFound} />
 				</Switch>
 			</div>
 		)
