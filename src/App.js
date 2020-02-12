@@ -6,7 +6,8 @@ import HomeContainer from "./containers/HomeContainer";
 import ManageContainer from "./containers/ManageContainer";
 import DrillContainer from "./containers/DrillContainer";
 import InfoContainer from "./containers/InfoContainer";
-import NotFound from "./components/NotFound"
+import NotFound from "./components/NotFound";
+import "./App.css";
 
 class App extends React.Component {
 
@@ -16,7 +17,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="App">
 				App<br /><br />
 				<Switch>
 					<Route path="/" exact component={HomeContainer} />
