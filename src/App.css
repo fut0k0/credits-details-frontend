@@ -13,6 +13,30 @@
 	font-size: 0.4em;
 }
 
+.Navigation {
+	background-color: lightgray;
+	font-size: 0.5em;
+}
+
+.NavLink {
+	text-decoration: none;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.NavLink:hover {
+	background-color: darkgray;
+	text-decoration: overline;
+}
+
+.NavLink:visited {
+	color: black;
+}
+
+.NavLink-current {
+	background-color: darkgray;
+}
+
 .btn-lo {
 	background-color: white;
 	border-radius: 12px;
@@ -22,11 +46,6 @@
 
 .btn-lo:hover {
 	background-color: darkgray;
-}
-
-.Navigation {
-	background-color: lightgray;
-	font-size: 0.5em;
 }
 
 /*
