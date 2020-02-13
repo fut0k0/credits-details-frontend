@@ -46,7 +46,7 @@ class FiltersContainer extends React.PureComponent {
 
 	render() {
 		return (
-			<div>
+			<div className="Filter">
 				<div>
 					<Filter
 						item={"artist"}
@@ -85,8 +85,9 @@ class FiltersContainer extends React.PureComponent {
 						onChange={this.handleChange}
 						onClick={this.handleClick} />
 				</div>
-				<div>
+				<div className="Filter-clear">
 					<button
+						className="btn-cl"
 						name="all"
 						onClick={this.handleClick}>
 						Clear All

@@ -7,18 +7,20 @@ const Filter = ({ albumsFiltered, onChange, onClick, item, value, data }) => {
 	const items = data.filter(datum => itemIds.includes(datum.id))
 
 	return (
-		<div>
+		<div className="Filter-item">
 			<label>
 				{item[0].toUpperCase() + item.substring(1) + ": "}
 				<select
+					className="Filter-select"
 					name={item + "_id"}
 					value={value}
 					onChange={onChange}>
 					<option key="default" value="" hidden={true}>(select)</option>
 					{ListOptions(items)}
 				</select>
-			</label>
+			</label>{" "}
 			<button
+				className="btn-rs"
 				name={item + "_id"}
 				onClick={onClick}>
 				Reset

@@ -13,8 +13,8 @@ const DrillContainer = props => {
 		return (
 			<div>
 				<Status history={props.history} />
-				<Navigation /><br />
-				<FiltersContainer /><br />
+				<Navigation />
+				<FiltersContainer />
 				<ShowAlbumsContainer drill={true} />
 			</div>
 		)

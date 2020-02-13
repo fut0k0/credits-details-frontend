@@ -45,6 +45,25 @@
 	background-color: darkgray;
 }
 
+.Filter {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.Filter-item {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.Filter-select {
+	width: 150px;
+}
+
+.Filter-clear {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 .btn-lo {
 	background-color: lightgray;
 	background: none;
@@ -56,6 +75,21 @@
 
 .btn-lo:hover {
 	text-decoration: overline;
+}
+
+.btn-rs:hover {
+	border-width: 1px;
+	border-color: black;
+}
+
+.btn-cl {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.btn-cl:hover {
+	border-width: 1px;
+	border-color: black;
 }
 
 /*
