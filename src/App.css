@@ -3,29 +3,37 @@
 	min-height: 100vh;
 	width: 100%;
 	min-width: 450px;
-	background-color: darkgray;
 	text-align: center;
-	font-size: 3em;
+}
+
+.Title {
+	background-color: darkgray;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 4em;
 }
 
 .Status {
-	background-color: lightgray;
-	font-size: 0.4em;
+	background-color: darkgray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 1em;
 }
 
 .Navigation {
 	background-color: lightgray;
-	font-size: 0.5em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 2em;
 }
 
 .NavLink {
 	text-decoration: none;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .NavLink:hover {
-	background-color: darkgray;
 	text-decoration: overline;
 }
 
@@ -47,7 +55,6 @@
 }
 
 .btn-lo:hover {
-	background-color: darkgray;
 	text-decoration: overline;
 }
 

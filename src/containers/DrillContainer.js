@@ -12,7 +12,7 @@ const DrillContainer = props => {
 	} else {
 		return (
 			<div>
-				<Status history={props.history} /><br />
+				<Status history={props.history} />
 				<Navigation /><br />
 				Drill<br /><br />
 				<FiltersContainer /><br />

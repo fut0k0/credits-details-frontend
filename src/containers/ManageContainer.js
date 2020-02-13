@@ -13,7 +13,7 @@ const ManageContainer = props => {
 	} else {
 		return (
 			<div>
-				<Status history={props.history} /><br />
+				<Status history={props.history} />
 				<Navigation /><br />
 				Manage<br /><br />
 				<AddAlbumForm /><br />

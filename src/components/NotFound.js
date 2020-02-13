@@ -10,9 +10,10 @@ const NotFound = props => {
 	} else {
 		return (
 			<div>
-				<Status history={props.history} /><br />
+				<Status history={props.history} />
 				<Navigation /><br />
-				<p>This page / URL does not exist. Use the navigation links to return to the application.</p>
+				<p>This page / URL does not exist.</p>
+				<p>Use the navigation links to return to the application.</p>
 			</div>
 		)
 	}

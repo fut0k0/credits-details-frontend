@@ -11,7 +11,7 @@ const InfoContainer = props => {
 	} else {
 		return (
 			<div>
-				<Status history={props.history} /><br />
+				<Status history={props.history} />
 				<Navigation /><br />
 				Info<br /><br />
 				<Info />
