@@ -3,10 +3,21 @@
 	min-height: 100vh;
 	width: 100%;
 	min-width: 450px;
-	background-color: lightgray;
+	background-color: darkgray;
 	text-align: center;
-	font-size: xx-large;
+	font-size: 3em;
 }
+
+.Status {
+	background-color: lightgray;
+	font-size: 0.4em;
+}
+
+/*
+.Navigation {
+	font-size: 0.5em;
+}
+*/
 
 /*
 .App-logo {
