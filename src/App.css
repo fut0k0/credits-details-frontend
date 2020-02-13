@@ -38,14 +38,17 @@
 }
 
 .btn-lo {
-	background-color: white;
-	border-radius: 12px;
-	border-width: 1px;
-	font-size: 0.8em;
+	background-color: lightgray;
+	background: none;
+	border: none;
+	padding: 0 2px 0;
+	font: inherit;
+	font-size: inherit;
 }
 
 .btn-lo:hover {
 	background-color: darkgray;
+	text-decoration: overline;
 }
 
 /*
