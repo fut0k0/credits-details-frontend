@@ -14,7 +14,6 @@ const DrillContainer = props => {
 			<div>
 				<Status history={props.history} />
 				<Navigation /><br />
-				Drill<br /><br />
 				<FiltersContainer /><br />
 				<ShowAlbumsContainer drill={true} />
 			</div>

@@ -47,48 +47,51 @@ class FiltersContainer extends React.PureComponent {
 	render() {
 		return (
 			<div>
-				Filters<br /><br />
-				<button
-					name="all"
-					onClick={this.handleClick}>
-					Clear All
-				</button>
-				<Filter
-					item={"artist"}
-					data={this.props.currentUser.artists}
-					value={this.state.artist_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"year"}
-					data={this.props.currentUser.years}
-					value={this.state.year_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"genre"}
-					data={this.props.currentUser.genres}
-					value={this.state.genre_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"producer"}
-					data={this.props.currentUser.producers}
-					value={this.state.producer_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"mixer"}
-					data={this.props.currentUser.mixers}
-					value={this.state.mixer_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"engineer"}
-					data={this.props.currentUser.engineers}
-					value={this.state.engineer_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
+				<div>
+					<Filter
+						item={"artist"}
+						data={this.props.currentUser.artists}
+						value={this.state.artist_id}
+						onChange={this.handleChange}
+						onClick={this.handleClick} />
+					<Filter
+						item={"year"}
+						data={this.props.currentUser.years}
+						value={this.state.year_id}
+						onChange={this.handleChange}
+						onClick={this.handleClick} />
+					<Filter
+						item={"genre"}
+						data={this.props.currentUser.genres}
+						value={this.state.genre_id}
+						onChange={this.handleChange}
+						onClick={this.handleClick} />
+					<Filter
+						item={"producer"}
+						data={this.props.currentUser.producers}
+						value={this.state.producer_id}
+						onChange={this.handleChange}
+						onClick={this.handleClick} />
+					<Filter
+						item={"mixer"}
+						data={this.props.currentUser.mixers}
+						value={this.state.mixer_id}
+						onChange={this.handleChange}
+						onClick={this.handleClick} />
+					<Filter
+						item={"engineer"}
+						data={this.props.currentUser.engineers}
+						value={this.state.engineer_id}
+						onChange={this.handleChange}
+						onClick={this.handleClick} />
+				</div>
+				<div>
+					<button
+						name="all"
+						onClick={this.handleClick}>
+						Clear All
+					</button>
+				</div>
 			</div>
 		)
 	}
