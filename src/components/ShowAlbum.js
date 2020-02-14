@@ -7,7 +7,7 @@ const button = (deleteAlbum, id) => (
 )
 
 const ShowAlbum = ({ deleteAlbum, album, drill }) => (
-	<div>
+	<div className="Album">
 		{album.title + " by " + album.artist.name + " "}
 		{drill ? null : button(deleteAlbum, album.id)}
 	</div>

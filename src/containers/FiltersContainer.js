@@ -46,7 +46,7 @@ class FiltersContainer extends React.PureComponent {
 
 	render() {
 		return (
-			<div className="Filter">
+			<div className="Filters">
 				<div>
 					<Filter
 						item={"artist"}

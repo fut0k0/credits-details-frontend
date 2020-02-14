@@ -45,7 +45,7 @@
 	background-color: darkgray;
 }
 
-.Filter {
+.Filters {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -62,6 +62,25 @@
 .Filter-clear {
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+
+.ShowAlbums {
+	padding-top: 20px;
+	padding-bottom: 20px;	
+}
+
+.Albums {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-evenly;
+}
+
+.Album {
+	height: 150px;
+	width: 150px;
+	box-shadow: 1px 1px 4px lightgray;
+	margin-bottom: 15px;
 }
 
 .btn-lo {

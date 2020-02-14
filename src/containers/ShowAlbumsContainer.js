@@ -30,10 +30,11 @@ const ShowAlbumsContainer = ({ currentUser, albumsFiltered, drill }) => {
 	})
 
 	return (
-		<div>
-			Show Albums<br /><br />
+		<div className="ShowAlbums">
 			{"Album count: " + albums.length}<br /><br />
-			{albums.map(album => <ShowAlbum key={album.id} album={album} drill={drill} />)}
+			<div className="Albums">
+				{albums.map(album => <ShowAlbum key={album.id} album={album} drill={drill} />)}
+			</div>
 		</div>
 	)
 }
