@@ -77,10 +77,14 @@
 }
 
 .Album {
-	height: 150px;
-	width: 150px;
+	height: auto;
+	width: 200px;
 	box-shadow: 1px 1px 4px lightgray;
+	padding: 5px;
 	margin-bottom: 15px;
+	font-size: 0.9em;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .btn-lo {
