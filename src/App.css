@@ -64,9 +64,7 @@
 	padding-bottom: 10px;
 }
 
-
 .ShowAlbums {
-	padding-top: 20px;
 	padding-bottom: 20px;	
 }
 
@@ -82,9 +80,12 @@
 	box-shadow: 1px 1px 4px lightgray;
 	padding: 5px;
 	margin-bottom: 15px;
-	font-size: 0.9em;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.Album-details {
+	font-size: 0.9em;
 }
 
 .btn-lo {
