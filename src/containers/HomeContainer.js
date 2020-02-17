@@ -9,8 +9,8 @@ const HomeContainer = props => {
 		return <InfoContainer history={props.history} />
 	} else {
 		return (
-			<div>
-				<Login history={props.history} /><br />
+			<div className="Home">
+				<Login history={props.history} /><br /><br /><br />
 				<Signup history={props.history} />
 			</div>
 		)

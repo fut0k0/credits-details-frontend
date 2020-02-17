@@ -13,11 +13,21 @@
 	text-align-last: center;
 }
 
+.App input {
+	width: 150px;
+	text-align: center;
+}
+
 .Title {
 	background-color: darkgray;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	font-size: 4em;
+}
+
+.Home {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .Status {
@@ -115,6 +125,11 @@
 }
 
 .btn-cl:hover {
+	border-width: 1px;
+	border-color: black;
+}
+
+.input-btn:hover {
 	border-width: 1px;
 	border-color: black;
 }
