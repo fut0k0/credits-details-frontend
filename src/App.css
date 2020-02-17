@@ -4,6 +4,13 @@
 	width: 100%;
 	min-width: 450px;
 	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.App select {
+	height: 20px;
+	width: 150px;
+	text-align-last: center;
 }
 
 .Title {
@@ -53,10 +60,6 @@
 .Filter-item {
 	padding-top: 3px;
 	padding-bottom: 3px;
-}
-
-.Filter-select {
-	width: 150px;
 }
 
 .Filter-clear {

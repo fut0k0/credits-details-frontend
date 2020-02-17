@@ -11,7 +11,6 @@ const Filter = ({ albumsFiltered, onChange, onClick, item, value, data }) => {
 			<label>
 				{item[0].toUpperCase() + item.substring(1) + ": "}
 				<select
-					className="Filter-select"
 					name={item + "_id"}
 					value={value}
 					onChange={onChange}>
