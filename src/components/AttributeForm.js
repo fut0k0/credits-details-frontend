@@ -1,8 +1,8 @@
 import React from "react"
 
 const loadSubmitButton = (attribute, value) => {
-	const enabledButton = <input type="submit" />;
-	const disabledButton = <input type="submit" disabled="disabled" />;
+	const enabledButton = <input id="btn-sb" type="submit" />;
+	const disabledButton = <input id="btn-sb" type="submit" disabled="disabled" />;
 	
 	if (!value) {
 		return disabledButton

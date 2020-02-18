@@ -129,6 +129,11 @@
 	grid-row: 1 / 1;	
 }
 
+.AddAttributes form {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
 .btn-lo {
 	background-color: lightgray;
 	background: none;
