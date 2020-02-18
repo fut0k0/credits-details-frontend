@@ -167,11 +167,11 @@
 	border-color: black;
 }
 
-#btn-sb {
+.btn-sb input {
 	width: auto;
 }
 
-#btn-sb:hover  {
+.btn-sb input:enabled:hover {
 	border-width: 1px;
 	border-color: black;	
 }

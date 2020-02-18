@@ -1,8 +1,8 @@
 import React from "react"
 
 const loadSubmitButton = (attribute, value) => {
-	const enabledButton = <input id="btn-sb" type="submit" />;
-	const disabledButton = <input id="btn-sb" type="submit" disabled="disabled" />;
+	const enabledButton = <input type="submit" />;
+	const disabledButton = <input type="submit" disabled="disabled" />;
 	
 	if (!value) {
 		return disabledButton
@@ -24,7 +24,9 @@ const AttributeForm = ({ onSubmit, onChange, attribute, value }) => (
 				value={value}
 				onChange={onChange} />
 		</label>{" "}
-		{loadSubmitButton(attribute, value)}
+		<span className="btn-sb">
+			{loadSubmitButton(attribute, value)}
+		</span>
 	</form>
 )
 

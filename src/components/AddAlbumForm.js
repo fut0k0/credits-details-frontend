@@ -111,7 +111,9 @@ class AddAlbumForm extends React.PureComponent {
 						value={this.state.engineer_id}
 						onChange={this.handleChange} />
 					<div className="AddAlbumForm-sb">
-						{this.validateFormData() ? <input id="btn-sb" type="submit" /> : <input id="btn-sb" type="submit" disabled="disabled" />}<br />
+						<span className="btn-sb">
+							{this.validateFormData() ? <input type="submit" /> : <input type="submit" disabled="disabled" />}
+						</span>
 					</div>
 				</form>
 			</div>
