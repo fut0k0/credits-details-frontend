@@ -64,51 +64,55 @@ class AddAlbumForm extends React.PureComponent {
 			<div className="AddAlbumForm">
 				Add Album<br /><br />
 				<form onSubmit={this.handleSubmit}>
-					<label>
-						Title:{" "}
-						<input
-							type="text"
-							name="title"
-							placeholder="(enter title)"
-							value={this.state.title}
-							onChange={this.handleChange} />
-					</label><br />
+					<div className="AddAlbumForm-item">
+						<label>
+							Title:{" "}
+							<input
+								type="text"
+								name="title"
+								placeholder="(enter title)"
+								value={this.state.title}
+								onChange={this.handleChange} />
+						</label>
+					</div>
 					<AlbumFormItem
 						item={"format"}
 						data={formatsData}
 						value={this.state.format}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<AlbumFormItem
 						item={"artist"}
 						data={this.props.artistsAll}
 						value={this.state.artist_id}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<AlbumFormItem
 						item={"year"}
 						data={this.props.yearsAll}
 						value={this.state.year_id}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<AlbumFormItem
 						item={"genre"}
 						data={this.props.genresAll}
 						value={this.state.genre_id}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<AlbumFormItem
 						item={"producer"}
 						data={this.props.producersAll}
 						value={this.state.producer_id}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<AlbumFormItem
 						item={"mixer"}
 						data={this.props.mixersAll}
 						value={this.state.mixer_id}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<AlbumFormItem
 						item={"engineer"}
 						data={this.props.engineersAll}
 						value={this.state.engineer_id}
-						onChange={this.handleChange} /><br />
-					{this.validateFormData() ? <input type="submit" /> : <input type="submit" disabled="disabled" />}<br />
+						onChange={this.handleChange} />
+					<div className="AddAlbumForm-sb">
+						{this.validateFormData() ? <input id="btn-sb" type="submit" /> : <input id="btn-sb" type="submit" disabled="disabled" />}<br />
+					</div>
 				</form>
 			</div>
 		)

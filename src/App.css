@@ -9,12 +9,12 @@
 
 .App select {
 	height: 20px;
-	width: 150px;
+	width: 175px;
 	text-align-last: center;
 }
 
 .App input {
-	width: 150px;
+	width: 175px;
 	text-align: center;
 }
 
@@ -46,8 +46,8 @@
 
 .NavLink {
 	text-decoration: none;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .NavLink:hover {
@@ -114,6 +114,16 @@
 	grid-row: 1 / 1;
 }
 
+.AddAlbumForm-item {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.AddAlbumForm-sb {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 .AddAttributes {
 	grid-column: 2 / 2;
 	grid-row: 1 / 1;	
@@ -150,6 +160,15 @@
 .input-btn:hover {
 	border-width: 1px;
 	border-color: black;
+}
+
+#btn-sb {
+	width: auto;
+}
+
+#btn-sb:hover  {
+	border-width: 1px;
+	border-color: black;	
 }
 
 /*
