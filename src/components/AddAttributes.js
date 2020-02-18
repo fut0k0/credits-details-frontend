@@ -33,7 +33,7 @@ class AddAttributes extends React.PureComponent {
 
 	render() {
 		return (
-			<div>
+			<div className="AddAttributes">
 				Add Attributes<br /><br />
 				<AttributeForm
 					attribute={"artist"}

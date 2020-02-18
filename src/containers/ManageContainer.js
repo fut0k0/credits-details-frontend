@@ -14,10 +14,11 @@ const ManageContainer = props => {
 		return (
 			<div>
 				<Status history={props.history} />
-				<Navigation /><br />
-				Manage<br /><br />
-				<AddAlbumForm /><br />
-				<AddAttributes /><br />
+				<Navigation />
+				<div className="Manage">
+					<AddAlbumForm />
+					<AddAttributes />
+				</div>
 				<ShowAlbumsContainer drill={false} />
 			</div>
 		)

@@ -61,7 +61,7 @@ class AddAlbumForm extends React.PureComponent {
 
 	render() {
 		return (
-			<div>
+			<div className="AddAlbumForm">
 				Add Album<br /><br />
 				<form onSubmit={this.handleSubmit}>
 					<label>

@@ -101,6 +101,24 @@
 	font-size: 0.9em;
 }
 
+.Manage {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100%;
+}
+
+.AddAlbumForm {
+	grid-column: 1 / 2;
+	grid-row: 1 / 1;
+}
+
+.AddAttributes {
+	grid-column: 2 / 2;
+	grid-row: 1 / 1;	
+}
+
 .btn-lo {
 	background-color: lightgray;
 	background: none;
