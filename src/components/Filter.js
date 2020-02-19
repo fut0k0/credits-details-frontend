@@ -7,7 +7,7 @@ const Filter = ({ albumsFiltered, onChange, onClick, item, value, data }) => {
 	const items = data.filter(datum => itemIds.includes(datum.id))
 
 	return (
-		<div className="Filter-item">
+		<div>
 			<label>
 				{item[0].toUpperCase() + item.substring(1) + ": "}
 				<select

@@ -2,7 +2,7 @@ import React from "react";
 import ListOptions from "./ListOptions";
 
 const AlbumFormItem = ({ onChange, item, value, data }) => (
-	<div className="AddAlbumForm-item">
+	<div>
 		<label>
 			{item[0].toUpperCase() + item.substring(1) + ": "}
 			<select

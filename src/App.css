@@ -1,3 +1,4 @@
+/* App */
 .App {
 	height: 100%;
 	min-height: 100vh;
@@ -18,16 +19,12 @@
 	text-align: center;
 }
 
+/* page headers & information */
 .Title {
 	background-color: darkgray;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	font-size: 4em;
-}
-
-.Home {
-	padding-top: 20px;
-	padding-bottom: 20px;
 }
 
 .Status {
@@ -62,23 +59,68 @@
 	background-color: darkgray;
 }
 
+/* Home container */
+.Home {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* Info page elements */
+
+
+/* Drill page elements */
 .Filters {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.Filter-item {
+.Filters div {
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
 
-.Filter-clear {
+#div-cl {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
+/* Manage page elements */
+.Manage {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100%;
+}
+
+.AddAlbumForm {
+	grid-column: 1 / 2;
+	grid-row: 1 / 1;
+}
+
+.AddAlbumForm div {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#div-sb {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.AddAttributes {
+	grid-column: 2 / 2;
+	grid-row: 1 / 1;
+}
+
+.AddAttributes form {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+/* Show Albums elements */
 .ShowAlbums {
-	padding-bottom: 20px;	
+	padding-bottom: 20px;
 }
 
 .Albums {
@@ -97,43 +139,11 @@
 	text-overflow: ellipsis;
 }
 
-.Album-details {
-	font-size: 0.9em;
+.Album span {
+	font-size: 0.8em;
 }
 
-.Manage {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 100%;
-}
-
-.AddAlbumForm {
-	grid-column: 1 / 2;
-	grid-row: 1 / 1;
-}
-
-.AddAlbumForm-item {
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-
-.AddAlbumForm-sb {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.AddAttributes {
-	grid-column: 2 / 2;
-	grid-row: 1 / 1;	
-}
-
-.AddAttributes form {
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-
+/* buttons */
 .btn-lo {
 	background-color: lightgray;
 	background: none;
@@ -147,68 +157,16 @@
 	text-decoration: overline;
 }
 
-.btn-rs:hover {
-	border-width: 1px;
-	border-color: black;
-}
-
 .btn-cl {
 	padding-left: 20px;
 	padding-right: 20px;
-}
-
-.btn-cl:hover {
-	border-width: 1px;
-	border-color: black;
-}
-
-.input-btn:hover {
-	border-width: 1px;
-	border-color: black;
 }
 
 .btn-sb input {
 	width: auto;
 }
 
-.btn-sb input:enabled:hover {
+.btn-cl:hover, .btn-sb input:enabled:hover, .btn-rs:hover, .input-btn:hover, .btn-dl:hover {
 	border-width: 1px;
-	border-color: black;	
+	border-color: black;
 }
-
-/*
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
-
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
-
-.App-link {
-	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-*/
