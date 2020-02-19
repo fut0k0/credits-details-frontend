@@ -12,8 +12,7 @@ const InfoContainer = props => {
 		return (
 			<div>
 				<Status history={props.history} />
-				<Navigation /><br />
-				Info<br /><br />
+				<Navigation />
 				<Info />
 			</div>
 		)

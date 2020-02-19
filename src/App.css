@@ -143,6 +143,19 @@
 	font-size: 0.8em;
 }
 
+/* Info page elements */
+.Info {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.Info p {
+	width: 375px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
 /* unmatched URL page elements */
 .NotFound {
 	padding-top: 20px;
