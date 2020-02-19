@@ -11,9 +11,11 @@ const NotFound = props => {
 		return (
 			<div>
 				<Status history={props.history} />
-				<Navigation /><br />
-				<p>This page / URL does not exist.</p>
-				<p>Use the navigation links to return to the application.</p>
+				<Navigation />
+				<div className="NotFound">
+					<p>This page / URL does not exist.</p>
+					<p>Use the navigation links to return to the application.</p>
+				</div>
 			</div>
 		)
 	}

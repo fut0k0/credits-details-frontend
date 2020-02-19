@@ -143,6 +143,12 @@
 	font-size: 0.8em;
 }
 
+/* unmatched URL page elements */
+.NotFound {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 /* buttons */
 .btn-lo {
 	background-color: lightgray;
