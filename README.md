@@ -1,18 +1,28 @@
 # Flatiron School React Redux Portfolio Project
 
 ----
-This application was built for Flatiron School's React Redux Portfolio Project.
+## Background Information
 
-----
-## Requirements
+This application was built for Flatiron School's React Redux portfolio project. This repository is the front end. The back end is [here](http://github.com/fut0k0/credits-details-backend).
 
 Some basic requirements for the project included:
 
-* single page application
+* React single page application
 * Redux to manage state
 * Rails API for data persistence
 * react-router with 3 routes
 * async actions
+
+----
+## Details
+
+The app was made with `create-react-app` using these versions:
+
+* react 16.12.0
+* react-redux 7.1.3
+* react-router-dom 5.1.2
+* redux 4.0.5
+* redux-thunk 2.3.0
 
 
 
