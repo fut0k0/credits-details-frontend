@@ -1,3 +1,22 @@
+# Flatiron School React Redux Portfolio Project
+
+----
+This application was built for Flatiron School's React Redux Portfolio Project.
+
+----
+## Requirements
+
+Some basic requirements for the project included:
+
+* single page application
+* Redux to manage state
+* Rails API for data persistence
+* react-router with 3 routes
+* async actions
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
