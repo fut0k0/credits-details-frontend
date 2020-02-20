@@ -1,6 +1,5 @@
 # Flatiron School React Redux Portfolio Project
 
-----
 ## Background Information
 
 This application was built for Flatiron School's React Redux portfolio project. This repository is the front end. The back end is [here](http://github.com/fut0k0/credits-details-backend).
@@ -13,16 +12,19 @@ Some basic requirements for the project included:
 * react-router with 3 routes
 * async actions
 
-----
 ## Details
 
-The app was made with `create-react-app` using these versions:
+The front end was made with `create-react-app` using:
 
 * react 16.12.0
 * react-redux 7.1.3
 * react-router-dom 5.1.2
 * redux 4.0.5
 * redux-thunk 2.3.0
+
+## Installation & Use
+
+Download this repository. Run `npm install`. Make sure the [back end](http://github.com/fut0k0/credits-details-backend) is up and running, then run `npm start`. This front end should be on localhost port 3001. If port 3001 is unavailable, update config/initializers/cors.rb on the back end with the appropriate port.
 
 
 
