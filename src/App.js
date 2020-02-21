@@ -18,7 +18,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<div className="Title">App</div>
+				<div className="Title"><strong>Drill Credits & Details</strong></div>
 				<Switch>
 					<Route path="/" exact component={HomeContainer} />
 					<Route path="/manage" exact component={ManageContainer} />

@@ -30,7 +30,7 @@ Download this repository. Run `npm install`. Make sure the [back end](http://git
 
 The intent of this application is to view an album collection by custom combinations of credits and details. Drill into a collection by artist, producer, mixer, etc. Look for commonalities and quickly find and group albums that meet certain criteria. View large collections in unique ways.
 
-For example, how many David Bowie albums do I have? Which Grunge records from 1991 do I have? Which Rock albums were produced by Tony Visconti? Of those, which ones did Tony Visconti also mix? Were any of those Morrissey albums?
+For example, how many David Bowie albums do I have? Which Grunge records from 1991 do I have? Which Rock albums were produced by Tony Visconti? Of those, which ones did Tony Visconti also mix? Are any of those Morrissey albums?
 
 To use the application, simply create an account. The info page has directions and guidelines.
 
