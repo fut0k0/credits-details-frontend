@@ -11,10 +11,11 @@ Some basic requirements for the project included:
 * Rails API for data persistence
 * react-router with 3 routes
 * async actions
+* fetch
 
 ## Packages & Versions
 
-The front end was made with `create-react-app` using:
+The front end was made with `npx create-react-app` using:
 
 * react 16.12.0
 * react-redux 7.1.3
@@ -28,9 +29,9 @@ Download this repository. Run `npm install`. Make sure the [back end](http://git
 
 ## Intent & Use
 
-The intent of this application is to view an album collection by custom combinations of credits and details. Drill into a collection by artist, producer, mixer, etc. Look for commonalities and quickly find and group albums that meet certain criteria. View large collections in unique ways.
+The intent of this application is to view an album collection by custom combinations of credits and details. Drill into a collection by artist, producer, mixer, etc. Look for commonalities, and quickly find albums that meet different criteria. View large collections in unique ways.
 
-For example, how many David Bowie albums do I have? Which Grunge records from 1991 do I have? Which Rock albums were produced by Tony Visconti? Of those, which ones did Tony Visconti also mix? Are any of those Morrissey albums?
+For example, how many David Bowie albums do I have? Which Grunge records from 1991 do I have? Which Rock albums were produced by Tony Visconti? Of those, which ones did Tony Visconti also mix? Are any of those David Bowie albums?
 
 To use the application, simply create an account. The info page has directions and guidelines.
 
