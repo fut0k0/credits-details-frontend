@@ -1,3 +1,4 @@
+// set options for album format
 const formatsData = [
 	{id: "(N/A)", name: "(N/A)"},
 	{id: "cassette", name: "cassette"},

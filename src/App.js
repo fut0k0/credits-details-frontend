@@ -11,6 +11,7 @@ import "./App.css";
 
 class App extends React.Component {
 
+	// check session for current user & load into store if exists
 	componentDidMount() {
 		this.props.getCurrentUser()
 	}
@@ -24,6 +25,7 @@ class App extends React.Component {
 					<Route path="/manage" exact component={ManageContainer} />
 					<Route path="/drill" exact component={DrillContainer} />
 					<Route path="/info" exact component={InfoContainer} />
+					// handle unmatched urls
 					<Route component={NotFound} />
 				</Switch>
 			</div>
