@@ -1,3 +1,16 @@
+/*
+user obj = {
+	id,
+	username,
+	albums,
+	artists,
+	years,
+	genres,
+	producers,
+	mixers,
+	engineers
+}
+*/
 const userReducer = (state=null, action) => {
 	switch (action.type) {
 		case "SET_CURRENT_USER":

@@ -1,3 +1,16 @@
+/*
+album obj = {
+	id,
+	title,
+	format,
+	year,
+	genre,
+	artist,
+	producer,
+	mixer,
+	engineer
+}
+*/
 const albumsReducer = (state=[], action) => {
 	switch (action.type) {
 		case "SET_USER_ALBUMS":

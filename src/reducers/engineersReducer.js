@@ -1,3 +1,9 @@
+/*
+engineer obj = {
+	id,
+	name
+}
+*/
 const engineersReducer = (state=[], action) => {
 	switch (action.type) {
 		case "SET_ENGINEERS_ALL":

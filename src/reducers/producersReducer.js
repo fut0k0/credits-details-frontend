@@ -1,3 +1,9 @@
+/*
+producer obj = {
+	id,
+	name
+}
+*/
 const producersReducer = (state=[], action) => {
 	switch (action.type) {
 		case "SET_PRODUCERS_ALL":

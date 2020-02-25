@@ -1,3 +1,9 @@
+/*
+artist obj = {
+	id,
+	name
+}
+*/
 const artistsReducer = (state=[], action) => {
 	switch (action.type) {
 		case "SET_ARTISTS_ALL":

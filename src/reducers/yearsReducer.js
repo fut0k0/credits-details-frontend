@@ -1,3 +1,9 @@
+/*
+year obj = {
+	id,
+	name
+}
+*/
 const yearsReducer = (state=[], action) => {
 	switch (action.type) {
 		case "SET_YEARS_ALL":
