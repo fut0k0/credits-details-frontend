@@ -12,9 +12,11 @@ const login = (loginData, history) => (
 		.then(resp => resp.json())
 		.then(userData => {
 			if (!userData.message) {
+				// on successful login, load user into store & send to drill page
 				dispatch({type: "SET_CURRENT_USER", payload: userData});
 				history.push("/drill");
 			} else {
+				// on failed login, display error message
 				alert(userData.message)
 			}
 		})
@@ -35,9 +37,11 @@ const signup = (signupData, history) => (
 		.then(resp => resp.json())
 		.then(userData => {
 			if (!userData.message) {
+				// on successful signup, load user into store & send to info page
 				dispatch({type: "SET_CURRENT_USER", payload: userData});
 				history.push("/info");
 			} else {
+				// on failed signup, display error message
 				alert(userData.message)
 			}
 		})
@@ -53,6 +57,7 @@ const logout = history => (
 		})
 		.then(resp => resp.json())
 		.then(data => {
+			// on logout, empty store & send user to root page
 			dispatch({type: "CLEAR_STORE"});
 			history.push("/");
 		})
@@ -69,8 +74,10 @@ const getCurrentUser = () => (
 		.then(resp => resp.json())
 		.then(userData => {
 			if (!userData.message) {
+				// if session holds user, load user into store
 				dispatch({type: "SET_CURRENT_USER", payload: userData})
 			} else {
+				// if session doesn't hold user, display message
 				alert(userData.message)
 			}
 		})

@@ -25,7 +25,7 @@ class App extends React.Component {
 					<Route path="/manage" exact component={ManageContainer} />
 					<Route path="/drill" exact component={DrillContainer} />
 					<Route path="/info" exact component={InfoContainer} />
-					// handle unmatched urls
+					{/* handle unmatched urls */}
 					<Route component={NotFound} />
 				</Switch>
 			</div>

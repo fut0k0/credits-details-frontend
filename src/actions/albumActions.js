@@ -12,8 +12,10 @@ const addAlbum = data => (
 		.then(resp => resp.json())
 		.then(albumData => {
 			if (!albumData.message) {
+				// on successful album creation, load album into store
 				dispatch({type: "ADD_ALBUM", payload: albumData})
 			} else {
+				// on failed album creation, display message
 				alert(albumData.message)
 			}
 		})
@@ -33,8 +35,10 @@ const deleteAlbum = id => {
 			.then(resp => resp.json())
 			.then(data => {
 				if (data.message === "Album deleted") {
+					// on successful album deletion, remove album from store
 					dispatch({type: "DELETE_ALBUM", payload: id})
 				} else {
+					// on failed album deletion, display message
 					alert("Error occurred")
 				}
 			})

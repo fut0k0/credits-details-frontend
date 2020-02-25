@@ -1,3 +1,4 @@
+// load attribute data from database into store
 const getAttributeAll = attribute => {
 	const url = "http://localhost:3000/api/v1/" + attribute;
 	const type = "SET_" + attribute.toUpperCase() + "_ALL";
@@ -15,6 +16,7 @@ const getAttributeAll = attribute => {
 	)
 }
 
+// add new attribute to database & load into store
 const addAttribute = (attribute, data) => {
 	const url = "http://localhost:3000/api/v1/" + attribute + "s";
 	const type = "ADD_" + attribute.toUpperCase();
@@ -33,8 +35,10 @@ const addAttribute = (attribute, data) => {
 			.then(resp => resp.json())
 			.then(attributeData => {
 				if (!attributeData.message) {
+					// on successful attribute creation, load attribute into store
 					dispatch({type, payload: attributeData})
 				} else {
+					// on failed attribute creation, display message
 					alert(attributeData.message)
 				}
 			})
