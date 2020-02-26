@@ -5,15 +5,15 @@ import Status from "../components/Status";
 import Navigation from "../components/Navigation";
 import Info from "../components/Info";
 
-const InfoContainer = props => {
-	if (!props.currentUser) {
+const InfoContainer = ({ currentUser, history }) => {
+	if (!currentUser) {
 		// if current user doesn't exist, return home elements
-		return <HomeContainer history={props.history} />
+		return <HomeContainer history={history} />
 	} else {
 		return (
 			// if current user exists, return info page elements
 			<div>
-				<Status history={props.history} />
+				<Status history={history} />
 				<Navigation />
 				<Info />
 			</div>

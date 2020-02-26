@@ -7,15 +7,15 @@ import Navigation from "../components/Navigation";
 import AddAlbumForm from "../components/AddAlbumForm";
 import AddAttributes from "../components/AddAttributes";
 
-const ManageContainer = props => {
-	if (!props.currentUser) {
+const ManageContainer = ({ currentUser, history }) => {
+	if (!currentUser) {
 		// if current user doesn't exist, return home elements
-		return <HomeContainer history={props.history} />
+		return <HomeContainer history={history} />
 	} else {
 		return (
 			// if current user exists, return manage page elements
 			<div>
-				<Status history={props.history} />
+				<Status history={history} />
 				<Navigation />
 				<div className="Manage">
 					<AddAlbumForm />

@@ -6,15 +6,15 @@ import ShowAlbumsContainer from "./ShowAlbumsContainer";
 import Status from "../components/Status";
 import Navigation from "../components/Navigation";
 
-const DrillContainer = props => {
-	if (!props.currentUser) {
+const DrillContainer = ({ currentUser, history }) => {
+	if (!currentUser) {
 		// if current user doesn't exist, return home elements
-		return <HomeContainer history={props.history} />
+		return <HomeContainer history={history} />
 	} else {
 		return (
 			// if current user exists, return drill page elements
 			<div>
-				<Status history={props.history} />
+				<Status history={history} />
 				<Navigation />
 				<FiltersContainer />
 				<ShowAlbumsContainer drill={true} />
