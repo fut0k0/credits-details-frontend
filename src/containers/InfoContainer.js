@@ -7,9 +7,11 @@ import Info from "../components/Info";
 
 const InfoContainer = props => {
 	if (!props.currentUser) {
+		// if current user doesn't exist, return home elements
 		return <HomeContainer history={props.history} />
 	} else {
 		return (
+			// if current user exists, return info page elements
 			<div>
 				<Status history={props.history} />
 				<Navigation />

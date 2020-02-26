@@ -5,8 +5,10 @@ import ShowAlbum from "../components/ShowAlbum";
 const ShowAlbumsContainer = ({ currentUser, albumsFiltered, drill }) => {
 	let albums = []
 
+	// drill prop serves as boolean flag (true for drill page, false for manage page)
 	drill ? albums = albumsFiltered : albums = currentUser.albums
 
+	// sort albums by title & artist name
 	albums.sort((a, b) => {
 		const titleA = a.title.toUpperCase();
 		const titleB = b.title.toUpperCase();
@@ -29,6 +31,7 @@ const ShowAlbumsContainer = ({ currentUser, albumsFiltered, drill }) => {
 		}
 	})
 
+	// display album count & card for each album
 	return (
 		<div className="ShowAlbums">
 			{"Album(s): " + albums.length}<br /><br />

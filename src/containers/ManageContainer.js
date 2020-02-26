@@ -9,9 +9,11 @@ import AddAttributes from "../components/AddAttributes";
 
 const ManageContainer = props => {
 	if (!props.currentUser) {
+		// if current user doesn't exist, return home elements
 		return <HomeContainer history={props.history} />
 	} else {
 		return (
+			// if current user exists, return manage page elements
 			<div>
 				<Status history={props.history} />
 				<Navigation />

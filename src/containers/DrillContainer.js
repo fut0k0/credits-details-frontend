@@ -8,9 +8,11 @@ import Navigation from "../components/Navigation";
 
 const DrillContainer = props => {
 	if (!props.currentUser) {
+		// if current user doesn't exist, return home elements
 		return <HomeContainer history={props.history} />
 	} else {
 		return (
+			// if current user exists, return drill page elements
 			<div>
 				<Status history={props.history} />
 				<Navigation />
