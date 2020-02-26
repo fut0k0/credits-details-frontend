@@ -6,7 +6,7 @@ import Filter from "../components/Filter";
 
 class FiltersContainer extends React.PureComponent {
 
-// track current filter values
+	// track current filter values
 	state = {
 		artist_id: "",
 		year_id: "",
@@ -16,12 +16,12 @@ class FiltersContainer extends React.PureComponent {
 		engineer_id: ""
 	}
 
-// handle filter change
+	// handle filter change
 	handleChange = event => {
 		this.setState({[event.target.name]: event.target.value})
 	}
 
-// handle filer reset & clear all buttons
+	// handle filer reset & clear all buttons
 	handleClick = event => {
 		if (event.target.name !== "all" ) {
 			this.setState({[event.target.name]: ""})
@@ -37,19 +37,19 @@ class FiltersContainer extends React.PureComponent {
 		}
 	}
 
-// check session for current user & load into store, load current user albums into store
+	// check session for current user & load into store, load current user albums into store
 	componentDidMount() {
 		this.props.getCurrentUser();
 		this.props.setUserAlbums(this.props.currentUser.albums);
 	}
 
-// reset current user albums in store & run filters
+	// reset current user albums in store & run filters
 	componentDidUpdate() {
 		this.props.setUserAlbums(this.props.currentUser.albums);
 		this.props.filterAlbums(this.state);
 	}
 
-// use Filter component for each desired filter attribute
+	// use Filter component for each desired filter attribute
 	render() {
 		return (
 			<div className="Filters">
