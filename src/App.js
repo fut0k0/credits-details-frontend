@@ -6,7 +6,7 @@ import HomeContainer from "./containers/HomeContainer";
 import ManageContainer from "./containers/ManageContainer";
 import DrillContainer from "./containers/DrillContainer";
 import InfoContainer from "./containers/InfoContainer";
-import NotFound from "./components/NotFound";
+import NotFoundContainer from "./containers/NotFoundContainer";
 import "./App.css";
 
 class App extends React.Component {
@@ -26,7 +26,7 @@ class App extends React.Component {
 					<Route path="/drill" exact component={DrillContainer} />
 					<Route path="/info" exact component={InfoContainer} />
 					{/* handle unmatched urls */}
-					<Route component={NotFound} />
+					<Route component={NotFoundContainer} />
 				</Switch>
 			</div>
 		)
