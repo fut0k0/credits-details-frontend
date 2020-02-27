@@ -9,6 +9,7 @@ const button = (deleteAlbum, id) => (
 	</span>
 )
 
+// generate album card
 const ShowAlbum = ({ deleteAlbum, album, drill }) => (
 	<div className="Album">
 		<strong>{album.title}</strong><br />
@@ -20,6 +21,7 @@ const ShowAlbum = ({ deleteAlbum, album, drill }) => (
 			{"Mixer: " + album.mixer.name}<br />
 			{"Engineer: " + album.engineer.name}<br />
 		</span>
+		{/* drill prop serves as boolean flag (true for drill page, false for manage page) */}
 		{drill ? null : button(deleteAlbum, album.id)}
 	</div>
 )

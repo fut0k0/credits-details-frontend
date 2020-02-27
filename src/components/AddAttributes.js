@@ -5,6 +5,7 @@ import AttributeForm from "./AttributeForm";
 
 class AddAttributes extends React.PureComponent {
 
+	// track controlled form values
 	state = {
 		artist: "",
 		year: "",
@@ -14,23 +15,26 @@ class AddAttributes extends React.PureComponent {
 		engineer: ""
 	}
 
+	// handle controlled form changes
 	handleChange = event => {
-		this.setState({
-			[event.target.name]: event.target.value
-		})
+		this.setState({[event.target.name]: event.target.value})
 	}
 
+	// handle controlled form submission
 	handleSubmit = (event, attribute) => {
 		const obj = {}
 
 		event.preventDefault();
+		// format controlled form data for back end
 		obj[attribute] = {name: this.state[attribute]};
 		this.props.addAttribute(attribute, obj);
+		// reset controlled form after submission
 		this.setState({
 			[attribute]: ""
 		});
 	}
 
+	// use AttributeForm component for each desired attribute
 	render() {
 		return (
 			<div className="AddAttributes">

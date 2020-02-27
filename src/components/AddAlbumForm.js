@@ -7,6 +7,7 @@ import formatsData from "../data/formatsData";
 
 class AddAlbumForm extends React.PureComponent {
 
+	// track controlled form values
 	state = {
 		title: "",
 		format: "",
@@ -18,6 +19,7 @@ class AddAlbumForm extends React.PureComponent {
 		engineer_id: ""
 	}
 
+	// load attribute datasets into store
 	componentDidMount() {
 		this.props.getAttributeAll("artists");
 		this.props.getAttributeAll("years");
@@ -27,17 +29,19 @@ class AddAlbumForm extends React.PureComponent {
 		this.props.getAttributeAll("engineers");
 	}
 
+	// check for empty data fields (before enabling submit)
 	validateFormData = () => (
 		this.state.title && this.state.format && this.state.artist_id && this.state.year_id && this.state.genre_id && this.state.producer_id && this.state.mixer_id && this.state.engineer_id ? true : false
 	)
 
+	// handle controlled form changes
 	handleChange = event => {
-		this.setState({
-			[event.target.name]: event.target.value
-		})
+		this.setState({[event.target.name]: event.target.value})
 	}
 
+	// handle controlled form submission
 	handleSubmit = event => {
+		// format controlled form data for back end
 		const formData = {
 			album: {
 				...this.state,
@@ -47,6 +51,7 @@ class AddAlbumForm extends React.PureComponent {
 
 		event.preventDefault();
 		this.props.addAlbum(formData);
+		// reset controlled form after submission
 		this.setState({
 			title: "",
 			format: "",
@@ -59,6 +64,7 @@ class AddAlbumForm extends React.PureComponent {
 		});
 	}
 
+	// use AlbumFormItem component for each desired album attribute (excluding title)
 	render() {
 		return (
 			<div className="AddAlbumForm">
