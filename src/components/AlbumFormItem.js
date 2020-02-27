@@ -1,6 +1,7 @@
 import React from "react";
-import ListOptions from "./ListOptions";
+import Options from "./Options";
 
+// return controlled <select> element with options based on "data" prop
 const AlbumFormItem = ({ onChange, item, value, data }) => (
 	<div>
 		<label>
@@ -10,7 +11,7 @@ const AlbumFormItem = ({ onChange, item, value, data }) => (
 				value={value}
 				onChange={onChange}>
 				<option key="default" value="" hidden={true}>(select value)</option>
-				{ListOptions(data)}
+				{Options(data)}
 			</select>
 		</label>
 	</div>
