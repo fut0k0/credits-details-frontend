@@ -7,6 +7,8 @@ import ManageContainer from "./containers/ManageContainer";
 import DrillContainer from "./containers/DrillContainer";
 import InfoContainer from "./containers/InfoContainer";
 import NotFoundContainer from "./containers/NotFoundContainer";
+import Status from "./components/Status";
+import Navigation from "./components/Navigation";
 import "./App.css";
 
 class App extends React.Component {
@@ -16,10 +18,26 @@ class App extends React.Component {
 		this.props.getCurrentUser()
 	}
 
+	loadApp = () => {
+		if (this.props.currentUser) {
+			// if current user exists, return app elements
+			return (
+				<>
+					<Status history={this.props.history} />
+					<Navigation />
+				</>
+			)
+		} else {
+			// if current user doesn't exist, return home elements
+			return null
+		}
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<div className="Title"><strong>Drill Credits & Details</strong></div>
+				{this.loadApp()}
 				<Switch>
 					<Route path="/" exact component={HomeContainer} />
 					<Route path="/manage" exact component={ManageContainer} />
