@@ -13,11 +13,6 @@ import "./App.css";
 
 class App extends React.Component {
 
-	// check session for current user & load into store if exists
-	componentDidMount() {
-		this.props.getCurrentUser()
-	}
-
 	loadApp = () => {
 		if (this.props.currentUser) {
 			// if current user exists, return app elements
@@ -25,12 +20,25 @@ class App extends React.Component {
 				<>
 					<Status history={this.props.history} />
 					<Navigation />
+					<Switch>
+						<Route path="/" exact component={HomeContainer} />
+						<Route path="/manage" exact component={ManageContainer} />
+						<Route path="/drill" exact component={DrillContainer} />
+						<Route path="/info" exact component={InfoContainer} />
+						{/* handle unmatched urls */}
+						<Route component={NotFoundContainer} />
+					</Switch>
 				</>
 			)
 		} else {
 			// if current user doesn't exist, return home elements
-			return null
+			return <HomeContainer history={this.props.history} />
 		}
+	}
+
+	// check session for current user & load into store if exists
+	componentDidMount() {
+		this.props.getCurrentUser()
 	}
 
 	render() {
@@ -38,14 +46,6 @@ class App extends React.Component {
 			<div className="App">
 				<div className="Title"><strong>Drill Credits & Details</strong></div>
 				{this.loadApp()}
-				<Switch>
-					<Route path="/" exact component={HomeContainer} />
-					<Route path="/manage" exact component={ManageContainer} />
-					<Route path="/drill" exact component={DrillContainer} />
-					<Route path="/info" exact component={InfoContainer} />
-					{/* handle unmatched urls */}
-					<Route component={NotFoundContainer} />
-				</Switch>
 			</div>
 		)
 	}
