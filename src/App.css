@@ -153,6 +153,12 @@
 	font-size: 0.8em;
 }
 
+/* Root page elements */
+.Root {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 /* unmatched URL page elements */
 .NotFound {
 	padding-top: 20px;
