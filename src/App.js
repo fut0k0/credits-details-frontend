@@ -2,11 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { Switch, Route } from "react-router-dom";
 import { getCurrentUser } from "./actions/userActions";
-import HomeContainer from "./containers/HomeContainer";
+import RootContainer from "./containers/RootContainer";
 import ManageContainer from "./containers/ManageContainer";
 import DrillContainer from "./containers/DrillContainer";
 import InfoContainer from "./containers/InfoContainer";
 import NotFoundContainer from "./containers/NotFoundContainer";
+import HomeContainer from "./containers/HomeContainer";
 import Status from "./components/Status";
 import Navigation from "./components/Navigation";
 import "./App.css";
@@ -21,7 +22,7 @@ class App extends React.Component {
 					<Status history={this.props.history} />
 					<Navigation />
 					<Switch>
-						<Route path="/" exact component={HomeContainer} />
+						<Route path="/" exact component={RootContainer} />
 						<Route path="/manage" exact component={ManageContainer} />
 						<Route path="/drill" exact component={DrillContainer} />
 						<Route path="/info" exact component={InfoContainer} />
