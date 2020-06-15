@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => (
-	<div className="Navigation">
+	<nav className="Navigation">
 		<NavLink
 			className="NavLink"
 			activeClassName="NavLink-current"
@@ -24,7 +24,7 @@ const Navigation = () => (
 			exact>
 			Info
 		</NavLink>
-	</div>
+	</nav>
 )
 
 export default Navigation

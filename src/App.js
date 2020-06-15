@@ -19,8 +19,8 @@ class App extends React.Component {
 			// if current user exists, return app elements
 			return (
 				<>
-					<Status history={this.props.history} />
 					<Navigation />
+					<Status history={this.props.history} />
 					<Switch>
 						<Route path="/" exact component={RootContainer} />
 						<Route path="/manage" exact component={ManageContainer} />
@@ -45,7 +45,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<div className="Title"><strong>Drill Credits & Details</strong></div>
+				<header className="Title"><strong>Drill Credits & Details</strong></header>
 				{this.loadApp()}
 			</div>
 		)
