@@ -67,7 +67,7 @@ class AddAlbumForm extends React.PureComponent {
 	// use AlbumFormItem component for each desired album attribute (excluding title)
 	render() {
 		return (
-			<div className="AddAlbumForm">
+			<section className="AddAlbumForm">
 				Add Album<br /><br />
 				<form onSubmit={this.handleSubmit}>
 					<div>
@@ -122,7 +122,7 @@ class AddAlbumForm extends React.PureComponent {
 						</span>
 					</div>
 				</form>
-			</div>
+			</section>
 		)
 	}
 

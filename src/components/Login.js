@@ -30,7 +30,7 @@ class Login extends React.PureComponent {
 
 	render() {
 		return (
-			<div>
+			<section>
 				Login<br /><br />
 				<form onSubmit={this.handleSubmit}>
 					<input
@@ -49,7 +49,7 @@ class Login extends React.PureComponent {
 					{this.state.username && this.state.password
 						? <input className="input-btn" type="submit" /> : <input type="submit" disabled="disabled" />}
 				</form>
-			</div>
+			</section>
 		)
 	}
 

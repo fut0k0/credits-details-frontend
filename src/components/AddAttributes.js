@@ -37,7 +37,7 @@ class AddAttributes extends React.PureComponent {
 	// use AttributeForm component for each desired attribute
 	render() {
 		return (
-			<div className="AddAttributes">
+			<section className="AddAttributes">
 				Add Attributes<br /><br />
 				<AttributeForm
 					attribute={"artist"}
@@ -69,7 +69,7 @@ class AddAttributes extends React.PureComponent {
 					value={this.state.engineer}
 					onChange={this.handleChange}
 					onSubmit={this.handleSubmit} />
-			</div>
+			</section>
 		)
 	}
 

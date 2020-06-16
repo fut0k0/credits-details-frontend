@@ -52,7 +52,7 @@ class FiltersContainer extends React.PureComponent {
 	// use Filter component for each desired filter attribute
 	render() {
 		return (
-			<div className="Filters">
+			<section className="Filters">
 				<Filter
 					item={"artist"}
 					data={this.props.currentUser.artists}
@@ -97,7 +97,7 @@ class FiltersContainer extends React.PureComponent {
 						Clear All
 					</button>
 				</div>
-			</div>
+			</section>
 		)
 	}
 

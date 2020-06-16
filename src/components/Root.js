@@ -1,9 +1,9 @@
 import React from "react"
 
 const Root = () => (
-	<div className="Root">
+	<section className="Root">
 		<p>Use the navigation links to select a page.</p>
-	</div>
+	</section>
 )
 
 export default Root
