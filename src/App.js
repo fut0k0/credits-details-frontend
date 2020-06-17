@@ -45,7 +45,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<header className="Title"><strong>Drill Credits & Details</strong></header>
+				<header>Drill Credits & Details</header>
 				{this.loadApp()}
 			</div>
 		)
