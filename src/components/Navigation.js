@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => (
-	<nav className="Navigation">
+	<nav>
 		<NavLink
 			className="NavLink"
 			activeClassName="NavLink-current"

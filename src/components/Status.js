@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import Logout from "./Logout";
 
 const Status = ({ currentUser, history }) => (
-	<section className="Status">
-		Logged in: {currentUser.username + " / "}
+	<section>
+		Drill happily, {currentUser.username}. Finished?{" "}
 		<Logout history={history} />
 	</section>
 )
