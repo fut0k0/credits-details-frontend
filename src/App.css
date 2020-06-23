@@ -6,11 +6,11 @@
 	width: 100%;
 	min-width: 450px;
 	font-family: Tahoma, Geneva, sans-serif;
-*/
 	background-color: #ffffff;
 	text-align: center;
 	font-family: Georgia, serif;
 	color: #1d1d1f;
+*/
 }
 
 .App select {
@@ -172,8 +172,10 @@
 
 /* Root page elements */
 .Root {
+/*
 	padding-top: 20px;
 	padding-bottom: 20px;
+*/
 }
 
 /* unmatched URL page elements */
@@ -216,6 +218,13 @@
 
 
 /* updated css */
+/* global */
+.App {
+	background-color: #ffffff;
+	text-align: center;
+	font-family: Georgia, serif;
+	color: #1d1d1f;
+}
 
 /* header */
 header {
@@ -304,11 +313,12 @@ main.Home input:last-child {
 
 /* Info page elements */
 
-/* unmatched URL page elements */
-main.NotFound > section {
+
+/* unmatched URL page & Root page elements */
+main.NotFound > section, main.Root > section {
 	grid-column: span 2
 }
 
-main.NotFound h2 {
+main.NotFound h2, main.Root h2 {
 	font-weight: 100
 }

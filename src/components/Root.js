@@ -1,7 +1,8 @@
 import React from "react"
 
 const Root = () => (
-	<section className="Root">
+	<section>
+		<h2>No Content</h2>
 		<p>Use the navigation links to select a page.</p>
 	</section>
 )
