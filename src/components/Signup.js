@@ -48,19 +48,19 @@ class Signup extends React.PureComponent {
 						name="username"
 						placeholder="(enter username)"
 						value={this.state.username}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<input
 						type="password"
 						name="password"
 						placeholder="(enter password)"
 						value={this.state.password}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<input
 						type="password"
 						name="passwordConfirm"
-						placeholder="(re-enter password)"
+						placeholder="(confirm password)"
 						value={this.state.passwordConfirm}
-						onChange={this.handleChange} /><br /><br />
+						onChange={this.handleChange} />
 					{/* validate controlled form data before enabling submit button */}
 					{this.state.password === this.state.passwordConfirm && this.state.password
 						&& this.state.username

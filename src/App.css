@@ -278,6 +278,7 @@ main {
 main.Home > section {
 	grid-column: span 2;
 	padding: 0 0 5%;
+	justify-self: center;
 }
 
 main.Home h2 {
@@ -285,9 +286,14 @@ main.Home h2 {
 }
 
 main.Home input {
-	box-sizing: content-box;
+	display: block;
+	box-sizing: border-box;
 	width: 200px;
-	padding: 2px 2px;
-	margin: 5px;
+	padding: 1% 1%;
+	margin: 4% 0%;
 	text-align: center;
+}
+
+main.Home input:last-child {
+	margin-top: 12%
 }

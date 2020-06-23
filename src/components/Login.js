@@ -38,13 +38,13 @@ class Login extends React.PureComponent {
 						name="username"
 						placeholder="(enter username)"
 						value={this.state.username}
-						onChange={this.handleChange} /><br />
+						onChange={this.handleChange} />
 					<input
 						type="password"
 						name="password"
 						placeholder="(enter password)"
 						value={this.state.password}
-						onChange={this.handleChange} /><br /><br />
+						onChange={this.handleChange} />
 					{/* validate controlled form data before enabling submit button */}
 					{this.state.username && this.state.password
 						? <input type="submit" value="Go" /> : <input type="submit" value="Go" disabled="disabled" />}
