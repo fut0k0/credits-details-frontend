@@ -7,6 +7,7 @@
 	min-width: 450px;
 	font-family: Tahoma, Geneva, sans-serif;
 */
+	background-color: #ffffff;
 	text-align: center;
 	font-family: Georgia, serif;
 	color: #1d1d1f;
@@ -73,8 +74,10 @@
 
 /* Home container */
 .Home {
+/*
 	padding-top: 20px;
 	padding-bottom: 20px;
+*/
 }
 
 /* Info page elements */
@@ -202,7 +205,7 @@
 	width: auto;
 }
 
-.btn-cl:hover, .btn-sb input:enabled:hover, .btn-rs:hover, .input-btn:hover, .btn-dl:hover {
+.btn-cl:hover, .btn-sb input:enabled:hover, .btn-rs:hover, .btn-dl:hover {
 	border-width: 1px;
 	border-color: black;
 }
@@ -222,7 +225,7 @@ header {
 
 /* Navigation elements */
 nav {
-	background-color: #f3f4f4;
+	background-color: #f3f3f4;
 	padding: 1% 1%;
 	font-family: Tahoma, sans-serif;
 	font-size: 1.5em;
@@ -261,4 +264,30 @@ nav {
 
 .App > section > span:hover {
 	text-decoration: underline
+}
+
+/* main */
+main {
+	display: grid;
+	grid-template: auto / 49% 49%;
+	grid-gap: 2%;
+	padding: 4% 1% 1%;
+}
+
+/* Home page elements */
+main.Home > section {
+	grid-column: span 2;
+	padding: 0 0 5%;
+}
+
+main.Home h2 {
+	font-weight: 100
+}
+
+main.Home input {
+	box-sizing: content-box;
+	width: 200px;
+	padding: 2px 2px;
+	margin: 5px;
+	text-align: center;
 }

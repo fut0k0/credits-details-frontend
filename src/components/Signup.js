@@ -41,7 +41,7 @@ class Signup extends React.PureComponent {
 	render() {
 		return (
 			<section>
-				Sign Up<br /><br />
+				<h2>Sign Up</h2>
 				<form onSubmit={this.handleSubmit}>
 					<input
 						type="text"
@@ -64,7 +64,7 @@ class Signup extends React.PureComponent {
 					{/* validate controlled form data before enabling submit button */}
 					{this.state.password === this.state.passwordConfirm && this.state.password
 						&& this.state.username
-						? <input className="input-btn" type="submit" /> : <input type="submit" disabled="disabled" />}
+						? <input type="submit" /> : <input type="submit" disabled="disabled" />}
 				</form>
 			</section>
 		)
