@@ -1,8 +1,8 @@
 import React from "react"
 
 const NotFound = () => (
-	<section className="NotFound">
-		<p>This page / URL does not exist.</p>
+	<section>
+		<h2>This page / URL does not exist.</h2>
 		<p>Use the navigation links to return to the application.</p>
 	</section>
 )

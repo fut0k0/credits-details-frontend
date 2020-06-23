@@ -1,6 +1,6 @@
 import React from "react";
 import NotFound from "../components/NotFound";
 
-const NotFoundContainer = () => <main><NotFound /></main>
+const NotFoundContainer = () => <main className="NotFound"><NotFound /></main>
 
 export default NotFoundContainer

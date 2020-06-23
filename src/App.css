@@ -82,8 +82,10 @@
 
 /* Info page elements */
 .Info {
+/*
 	padding-top: 20px;
 	padding-bottom: 20px;
+*/
 }
 
 .Info p {
@@ -176,8 +178,10 @@
 
 /* unmatched URL page elements */
 .NotFound {
+/*
 	padding-top: 20px;
 	padding-bottom: 20px;
+*/
 }
 
 /* buttons */
@@ -296,4 +300,15 @@ main.Home input {
 
 main.Home input:last-child {
 	margin-top: 12%
+}
+
+/* Info page elements */
+
+/* unmatched URL page elements */
+main.NotFound > section {
+	grid-column: span 2
+}
+
+main.NotFound h2 {
+	font-weight: 100
 }
