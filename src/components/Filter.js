@@ -11,24 +11,30 @@ const Filter = ({ albumsFiltered, onChange, onClick, item, value, data }) => {
 
 	// return controlled <select> element with relevant or "matched" items as options
 	return (
-		<div>
-			<label>
-				{item[0].toUpperCase() + item.substring(1) + ": "}
+		<tr>
+			<td>
+				<label htmlFor={item + "_id"}>
+					{item[0].toUpperCase() + item.substring(1) + ": "}
+				</label>
+			</td>
+			<td>
 				<select
+					id={item + "_id"}
 					name={item + "_id"}
 					value={value}
 					onChange={onChange}>
 					<option key="default" value="" hidden={true}>(select)</option>
 					{Options(items)}
 				</select>
-			</label>{" "}
-			<button
-				className="btn-rs"
-				name={item + "_id"}
-				onClick={onClick}>
-				Reset
-			</button>
-		</div>
+			</td>
+			<td>
+				<button
+					name={item + "_id"}
+					onClick={onClick}>
+					Clear
+				</button>
+			</td>
+		</tr>
 	)
 }
 

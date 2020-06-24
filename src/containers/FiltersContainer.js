@@ -52,51 +52,57 @@ class FiltersContainer extends React.PureComponent {
 	// use Filter component for each desired filter attribute
 	render() {
 		return (
-			<section className="Filters">
-				<Filter
-					item={"artist"}
-					data={this.props.currentUser.artists}
-					value={this.state.artist_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"year"}
-					data={this.props.currentUser.years}
-					value={this.state.year_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"genre"}
-					data={this.props.currentUser.genres}
-					value={this.state.genre_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"producer"}
-					data={this.props.currentUser.producers}
-					value={this.state.producer_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"mixer"}
-					data={this.props.currentUser.mixers}
-					value={this.state.mixer_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<Filter
-					item={"engineer"}
-					data={this.props.currentUser.engineers}
-					value={this.state.engineer_id}
-					onChange={this.handleChange}
-					onClick={this.handleClick} />
-				<div id="div-cl">
-					<button
-						className="btn-cl"
-						name="all"
-						onClick={this.handleClick}>
-						Clear All
-					</button>
-				</div>
+			<section>
+				<h3>Filters</h3>
+				<table>
+					<tbody>
+						<Filter
+							item={"artist"}
+							data={this.props.currentUser.artists}
+							value={this.state.artist_id}
+							onChange={this.handleChange}
+							onClick={this.handleClick} />
+						<Filter
+							item={"year"}
+							data={this.props.currentUser.years}
+							value={this.state.year_id}
+							onChange={this.handleChange}
+							onClick={this.handleClick} />
+						<Filter
+							item={"genre"}
+							data={this.props.currentUser.genres}
+							value={this.state.genre_id}
+							onChange={this.handleChange}
+							onClick={this.handleClick} />
+						<Filter
+							item={"producer"}
+							data={this.props.currentUser.producers}
+							value={this.state.producer_id}
+							onChange={this.handleChange}
+							onClick={this.handleClick} />
+						<Filter
+							item={"mixer"}
+							data={this.props.currentUser.mixers}
+							value={this.state.mixer_id}
+							onChange={this.handleChange}
+							onClick={this.handleClick} />
+						<Filter
+							item={"engineer"}
+							data={this.props.currentUser.engineers}
+							value={this.state.engineer_id}
+							onChange={this.handleChange}
+							onClick={this.handleClick} />
+						<tr>
+							<td>
+								<button
+									name="all"
+									onClick={this.handleClick}>
+									Clear All
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 		)
 	}
