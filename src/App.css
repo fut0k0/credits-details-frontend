@@ -89,10 +89,12 @@
 }
 
 .Info p {
+/*
 	width: 425px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
+*/
 }
 
 /* Drill page elements */
@@ -284,7 +286,7 @@ main {
 	display: grid;
 	grid-template: auto / 49% 49%;
 	grid-gap: 2%;
-	padding: 4% 1% 1%;
+	padding: 4% 2% 1%;
 }
 
 /* Home page elements */
@@ -312,7 +314,14 @@ main.Home input:last-child {
 }
 
 /* Info page elements */
-
+main.Info p {
+	min-width: 300px;
+	max-width: 600px;
+	padding: 0 2%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+}
 
 /* unmatched URL page & Root page elements */
 main.NotFound > section, main.Root > section {
