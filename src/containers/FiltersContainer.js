@@ -93,7 +93,7 @@ class FiltersContainer extends React.PureComponent {
 							onChange={this.handleChange}
 							onClick={this.handleClick} />
 						<tr>
-							<td>
+							<td colSpan="3">
 								<button
 									name="all"
 									onClick={this.handleClick}>

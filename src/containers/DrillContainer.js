@@ -3,7 +3,7 @@ import FiltersContainer from "./FiltersContainer";
 import ShowAlbumsContainer from "./ShowAlbumsContainer";
 
 const DrillContainer = () => (
-	<main>
+	<main className="Drill">
 		<FiltersContainer />
 		<ShowAlbumsContainer drill={true} />
 	</main>
