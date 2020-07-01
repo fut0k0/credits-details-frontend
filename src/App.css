@@ -156,17 +156,22 @@
 }
 
 /* Show Albums elements */
+/*
 .ShowAlbums {
 	padding-bottom: 20px;
 }
+*/
 
 .Albums {
+/*
 	display: flex;
 	flex-flow: wrap;
 	justify-content: space-evenly;
+*/
 }
 
 .Album {
+/*
 	height: auto;
 	width: 200px;
 	box-shadow: 1px 1px 4px lightgray;
@@ -174,10 +179,11 @@
 	margin-bottom: 15px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+*/
 }
 
 .Album span {
-	font-size: 0.8em;
+/* 	font-size: 0.8em; */
 }
 
 /* Root page elements */
@@ -354,9 +360,47 @@ main.Drill {
 	grid-template: auto / 32.7% 65.3%
 }
 
-main.Drill > section:first-child {
+main.Drill > section {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* ShowAlbumsContainer elements */
+section > h4 {
+	font-weight: 100
+}
+
+.Albums {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.Album {
+	height: auto;
+	width: 200px;
+	margin: 1% 1%;
+	box-shadow: 1px 1px 4px lightgray;
+}
+
+.Album h4, p {
+	padding: 0 3%
+}
+
+.Album p {
+	font-size: 0.9em
+}
+
+.Album div {
+	display: inline-block;
+	padding: 0 5% 5%;
+	text-align: left;
+}
+
+.Album div > p {
+	padding: 0;
+	margin: 0;
+	font-size: 0.8em;
 }
 
 /* Info page elements */

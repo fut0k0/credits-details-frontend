@@ -33,8 +33,9 @@ const ShowAlbumsContainer = ({ currentUser, albumsFiltered, drill }) => {
 
 	// display album count & card for each album
 	return (
-		<section className="ShowAlbums">
-			{"Album(s): " + albums.length}<br /><br />
+		<section>
+			<h3>Albums</h3>
+			<h4>{"(total: " + albums.length + ")"}</h4>
 			<div className="Albums">
 				{albums.map(album => <ShowAlbum key={album.id} album={album} drill={drill} />)}
 			</div>
