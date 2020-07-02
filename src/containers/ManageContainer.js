@@ -4,11 +4,9 @@ import AddAlbumForm from "../components/AddAlbumForm";
 import AddAttributes from "../components/AddAttributes";
 
 const ManageContainer = () => (
-	<main>
-		<div className="Manage">
-			<AddAlbumForm />
-			<AddAttributes />
-		</div>
+	<main className="Manage">
+		<AddAlbumForm />
+		<AddAttributes />
 		<ShowAlbumsContainer drill={false} />
 	</main>
 )

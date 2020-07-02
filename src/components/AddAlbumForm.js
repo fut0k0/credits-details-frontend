@@ -67,60 +67,69 @@ class AddAlbumForm extends React.PureComponent {
 	// use AlbumFormItem component for each desired album attribute (excluding title)
 	render() {
 		return (
-			<section className="AddAlbumForm">
-				Add Album<br /><br />
+			<section>
+				<h2>Add Album</h2>
 				<form onSubmit={this.handleSubmit}>
-					<div>
-						<label>
-							Title:{" "}
-							<input
-								type="text"
-								name="title"
-								placeholder="(enter title)"
-								value={this.state.title}
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<label htmlFor="title">
+										Title:
+									</label>
+								</td>
+								<td>
+									<input
+										type="text"
+										id="title"
+										name="title"
+										placeholder="(enter title)"
+										value={this.state.title}
+										onChange={this.handleChange} />
+								</td>
+							</tr>
+							<AlbumFormItem
+								item={"format"}
+								data={formatsData}
+								value={this.state.format}
 								onChange={this.handleChange} />
-						</label>
-					</div>
-					<AlbumFormItem
-						item={"format"}
-						data={formatsData}
-						value={this.state.format}
-						onChange={this.handleChange} />
-					<AlbumFormItem
-						item={"artist"}
-						data={this.props.artistsAll}
-						value={this.state.artist_id}
-						onChange={this.handleChange} />
-					<AlbumFormItem
-						item={"year"}
-						data={this.props.yearsAll}
-						value={this.state.year_id}
-						onChange={this.handleChange} />
-					<AlbumFormItem
-						item={"genre"}
-						data={this.props.genresAll}
-						value={this.state.genre_id}
-						onChange={this.handleChange} />
-					<AlbumFormItem
-						item={"producer"}
-						data={this.props.producersAll}
-						value={this.state.producer_id}
-						onChange={this.handleChange} />
-					<AlbumFormItem
-						item={"mixer"}
-						data={this.props.mixersAll}
-						value={this.state.mixer_id}
-						onChange={this.handleChange} />
-					<AlbumFormItem
-						item={"engineer"}
-						data={this.props.engineersAll}
-						value={this.state.engineer_id}
-						onChange={this.handleChange} />
-					<div id="div-sb">
-						<span className="btn-sb">
-							{this.validateFormData() ? <input type="submit" /> : <input type="submit" disabled="disabled" />}
-						</span>
-					</div>
+							<AlbumFormItem
+								item={"artist"}
+								data={this.props.artistsAll}
+								value={this.state.artist_id}
+								onChange={this.handleChange} />
+							<AlbumFormItem
+								item={"year"}
+								data={this.props.yearsAll}
+								value={this.state.year_id}
+								onChange={this.handleChange} />
+							<AlbumFormItem
+								item={"genre"}
+								data={this.props.genresAll}
+								value={this.state.genre_id}
+								onChange={this.handleChange} />
+							<AlbumFormItem
+								item={"producer"}
+								data={this.props.producersAll}
+								value={this.state.producer_id}
+								onChange={this.handleChange} />
+							<AlbumFormItem
+								item={"mixer"}
+								data={this.props.mixersAll}
+								value={this.state.mixer_id}
+								onChange={this.handleChange} />
+							<AlbumFormItem
+								item={"engineer"}
+								data={this.props.engineersAll}
+								value={this.state.engineer_id}
+								onChange={this.handleChange} />
+							<tr>
+								<td colSpan="2">
+									{this.validateFormData() ? <input type="submit" value="Add" /> : <input type="submit" value="Add" disabled="disabled" />}
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</form>
 			</section>
 		)

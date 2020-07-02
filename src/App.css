@@ -125,28 +125,37 @@
 
 /* Manage page elements */
 .Manage {
+/*
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 100%;
+*/
 }
 
+/*
 .AddAlbumForm {
 	grid-column: 1 / 2;
 	grid-row: 1 / 1;
 }
+*/
 
+/*
 .AddAlbumForm div {
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
+*/
 
+/*
 #div-sb {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+*/
 
+/*
 .AddAttributes {
 	grid-column: 2 / 2;
 	grid-row: 1 / 1;
@@ -156,6 +165,7 @@
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
+*/
 
 /* Show Albums elements */
 /*
@@ -228,12 +238,14 @@
 }
 
 .btn-sb input {
-	width: auto;
+/* 	width: auto; */
 }
 
 /*.btn-cl:hover,*/ .btn-sb input:enabled:hover, /*.btn-rs:hover,*/ .btn-dl:hover {
+/*
 	border-width: 1px;
 	border-color: black;
+*/
 }
 
 
@@ -249,7 +261,7 @@
 main {
 	display: grid;
 	grid-template: auto / 49% 49%;
-	grid-gap: 2%;
+	grid-gap: 1% 2%;
 	padding: 4% 2% 1%;
 }
 
@@ -258,7 +270,9 @@ main > section > h2 {
 }
 
 input {
+	box-sizing: border-box;
 	width: 175px;
+	padding: 0;
 	text-align: center;
 }
 
@@ -350,7 +364,6 @@ main.Home > section {
 
 main.Home input {
 	display: block;
-	box-sizing: border-box;
 	width: 200px;
 	padding: 1% 1%;
 	margin: 4% 0%;
@@ -407,6 +420,25 @@ div.Album > div > p {
 	padding: 0;
 	margin: 0;
 	font-size: 0.8em;
+}
+
+/* Manage page elements */
+main.Manage > section:first-child {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main.Manage > section:first-child tr:last-child input {
+	width: auto;
+	padding: 1px 6px;
+}
+
+main.Manage > section:first-child tr:last-child input:enabled:hover {
+	color: #0066c9
+}
+
+main.Manage > section:last-child {
+	grid-column: span 2
 }
 
 /* Info page elements */

@@ -14,7 +14,7 @@ const Filter = ({ albumsFiltered, onChange, onClick, item, value, data }) => {
 		<tr>
 			<td>
 				<label htmlFor={item + "_id"}>
-					{item[0].toUpperCase() + item.substring(1) + ": "}
+					{item[0].toUpperCase() + item.substring(1) + ":"}
 				</label>
 			</td>
 			<td>
