@@ -253,6 +253,10 @@ main {
 	padding: 4% 2% 1%;
 }
 
+main > section > h2 {
+	font-weight: 100
+}
+
 input {
 	width: 175px;
 	text-align: center;
@@ -344,10 +348,6 @@ main.Home > section {
 	justify-self: center;
 }
 
-main.Home h2 {
-	font-weight: 100
-}
-
 main.Home input {
 	display: block;
 	box-sizing: border-box;
@@ -372,9 +372,6 @@ main.Drill > section:first-child {
 }
 
 /* ShowAlbumsContainer elements */
-main > section > h3 > span {
-	font-weight: 100
-}
 
 div.Albums {
 	display: flex;
@@ -425,8 +422,4 @@ main.Info p {
 /* unmatched URL page & Root page elements */
 main.NotFound > section, main.Root > section {
 	grid-column: span 2
-}
-
-main.NotFound h2, main.Root h2 {
-	font-weight: 100
 }

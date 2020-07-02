@@ -53,7 +53,7 @@ class FiltersContainer extends React.PureComponent {
 	render() {
 		return (
 			<section>
-				<h3>Filters</h3>
+				<h2>Filters</h2>
 				<table>
 					<tbody>
 						<Filter
