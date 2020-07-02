@@ -22,8 +22,10 @@
 }
 
 .App input {
+/*
 	width: 175px;
 	text-align: center;
+*/
 }
 
 /* page headers & information */
@@ -244,6 +246,44 @@
 	color: #1d1d1f;
 }
 
+main {
+	display: grid;
+	grid-template: auto / 49% 49%;
+	grid-gap: 2%;
+	padding: 4% 2% 1%;
+}
+
+input {
+	width: 175px;
+	text-align: center;
+}
+
+table {
+	border-spacing: 0.3em 0.9em;
+	padding: 0 2%;
+}
+
+tr {
+	vertical-align: middle
+}
+
+td:first-child {
+	text-align: right
+}
+
+tr:last-child > td {
+	padding-top: 0.9em
+}
+
+select {
+	width: 175px;
+	text-align-last: center;
+}
+
+button:hover {
+	color: #0066c9
+}
+
 /* header */
 header {
 	background-color: #0a0a0a;
@@ -297,40 +337,6 @@ nav {
 	text-decoration: underline
 }
 
-/* main */
-main {
-	display: grid;
-	grid-template: auto / 49% 49%;
-	grid-gap: 2%;
-	padding: 4% 2% 1%;
-}
-
-table {
-	border-spacing: 0.3em 0.9em;
-	padding: 0 2%;
-}
-
-tr {
-	vertical-align: middle
-}
-
-td:first-child {
-	text-align: right
-}
-
-tr:last-child > td {
-	padding-top: 0.9em
-}
-
-select {
-	width: 175px;
-	text-align-last: center;
-}
-
-button:hover {
-	color: #0066c9
-}
-
 /* Home page elements */
 main.Home > section {
 	grid-column: span 2;
@@ -360,44 +366,47 @@ main.Drill {
 	grid-template: auto / 32.7% 65.3%
 }
 
-main.Drill > section {
+main.Drill > section:first-child {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 /* ShowAlbumsContainer elements */
-section > h4 {
+main > section > h3 > span {
 	font-weight: 100
 }
 
-.Albums {
+div.Albums {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 }
 
-.Album {
+div.Album {
 	height: auto;
 	width: 200px;
 	margin: 1% 1%;
-	box-shadow: 1px 1px 4px lightgray;
+	border: 1px solid #f3f3f4;
 }
 
-.Album h4, p {
-	padding: 0 3%
+div.Album > h4 {
+	padding: 1.33em 3%;
+	margin: 0;
+	background-color: #f3f3f4;
 }
 
-.Album p {
-	font-size: 0.9em
+div.Album > p {
+	padding: 0 3%;
+	font-size: 0.9em;
 }
 
-.Album div {
+div.Album > div {
 	display: inline-block;
-	padding: 0 5% 5%;
+	padding: 5% 5%;
 	text-align: left;
 }
 
-.Album div > p {
+div.Album > div > p {
 	padding: 0;
 	margin: 0;
 	font-size: 0.8em;
