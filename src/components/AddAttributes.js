@@ -37,8 +37,8 @@ class AddAttributes extends React.PureComponent {
 	// use AttributeForm component for each desired attribute
 	render() {
 		return (
-			<section className="AddAttributes">
-				Add Attributes<br /><br />
+			<section>
+				<h2>Add Attributes</h2>
 				<AttributeForm
 					attribute={"artist"}
 					value={this.state.artist}

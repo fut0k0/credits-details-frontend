@@ -241,7 +241,7 @@
 /* 	width: auto; */
 }
 
-/*.btn-cl:hover,*/ .btn-sb input:enabled:hover, /*.btn-rs:hover,*/ .btn-dl:hover {
+/* .btn-cl:hover, .btn-sb input:enabled:hover, .btn-rs:hover, .btn-dl:hover */ {
 /*
 	border-width: 1px;
 	border-color: black;
@@ -434,6 +434,24 @@ main.Manage > section:first-child tr:last-child input {
 }
 
 main.Manage > section:first-child tr:last-child input:enabled:hover {
+	color: #0066c9
+}
+
+main.Manage > section:nth-child(2) {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main.Manage > section:nth-child(2) tr:last-child > td {
+	padding-top: 0
+}
+
+main.Manage > section:nth-child(2) td:last-child > input {
+	width: auto;
+	padding: 1px 6px;
+}
+
+main.Manage > section:nth-child(2) td:last-child > input:enabled:hover {
 	color: #0066c9
 }
 
