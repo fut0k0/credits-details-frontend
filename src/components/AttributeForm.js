@@ -17,29 +17,17 @@ const loadSubmitButton = (attribute, value) => {
 // generate controlled form for adding an album attribute ("attribute" prop)
 const AttributeForm = ({ onSubmit, onChange, attribute, value }) => (
 	<form onSubmit={event => {onSubmit(event, attribute)}}>
-		<table>
-			<tbody>
-				<tr>
-					<td>
-						<label htmlFor={attribute}>
-							{attribute[0].toUpperCase() + attribute.substring(1) + ":"}
-						</label>
-					</td>
-					<td>
-						<input
-							type="text"
-							id={attribute}
-							name={attribute}
-							placeholder={attribute === "year" ? "(enter 4 digit year)" : "(enter name)"}
-							value={value}
-							onChange={onChange} />
-					</td>
-					<td>
-						{loadSubmitButton(attribute, value)}
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<label htmlFor={attribute}>
+			{attribute[0].toUpperCase() + attribute.substring(1) + ":"}
+		</label>
+		<input
+			type="text"
+			id={attribute}
+			name={attribute}
+			placeholder={attribute === "year" ? "(enter 4 digit year)" : "(enter name)"}
+			value={value}
+			onChange={onChange} />
+		{loadSubmitButton(attribute, value)}
 	</form>
 )
 

@@ -39,36 +39,64 @@ class AddAttributes extends React.PureComponent {
 		return (
 			<section>
 				<h2>Add Attributes</h2>
-				<AttributeForm
-					attribute={"artist"}
-					value={this.state.artist}
-					onChange={this.handleChange}
-					onSubmit={this.handleSubmit} />
-				<AttributeForm
-					attribute={"year"}
-					value={this.state.year}
-					onChange={this.handleChange}
-					onSubmit={this.handleSubmit} />
-				<AttributeForm
-					attribute={"genre"}
-					value={this.state.genre}
-					onChange={this.handleChange}
-					onSubmit={this.handleSubmit} />
-				<AttributeForm
-					attribute={"producer"}
-					value={this.state.producer}
-					onChange={this.handleChange}
-					onSubmit={this.handleSubmit} />
-				<AttributeForm
-					attribute={"mixer"}
-					value={this.state.mixer}
-					onChange={this.handleChange}
-					onSubmit={this.handleSubmit} />
-				<AttributeForm
-					attribute={"engineer"}
-					value={this.state.engineer}
-					onChange={this.handleChange}
-					onSubmit={this.handleSubmit} />
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<AttributeForm
+									attribute={"artist"}
+									value={this.state.artist}
+									onChange={this.handleChange}
+									onSubmit={this.handleSubmit} />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<AttributeForm
+									attribute={"year"}
+									value={this.state.year}
+									onChange={this.handleChange}
+									onSubmit={this.handleSubmit} />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<AttributeForm
+									attribute={"genre"}
+									value={this.state.genre}
+									onChange={this.handleChange}
+									onSubmit={this.handleSubmit} />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<AttributeForm
+									attribute={"producer"}
+									value={this.state.producer}
+									onChange={this.handleChange}
+									onSubmit={this.handleSubmit} />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<AttributeForm
+									attribute={"mixer"}
+									value={this.state.mixer}
+									onChange={this.handleChange}
+									onSubmit={this.handleSubmit} />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<AttributeForm
+									attribute={"engineer"}
+									value={this.state.engineer}
+									onChange={this.handleChange}
+									onSubmit={this.handleSubmit} />
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 		)
 	}
