@@ -3,10 +3,7 @@ import { connect } from "react-redux";
 import { deleteAlbum } from "../actions/albumActions";
 
 const button = (deleteAlbum, id) => (
-	<span>
-		<br />
-		<button className="btn-dl" onClick={() => deleteAlbum(id)}>Delete</button>
-	</span>
+	<button onClick={() => deleteAlbum(id)}>Delete</button>
 )
 
 // generate album card

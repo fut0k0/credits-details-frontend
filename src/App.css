@@ -426,6 +426,12 @@ div.Album > div > p {
 	font-size: 0.8em;
 }
 
+div.Album > button {
+	display: block;
+	margin: 5% auto 5%;
+	font-size: 0.7em;
+}
+
 /* Manage page elements */
 main.Manage > section:first-child {
 	margin-left: auto;
