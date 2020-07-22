@@ -1,255 +1,3 @@
-/* App */
-.App {
-/*
-	height: 100%;
-	min-height: 100vh;
-	width: 100%;
-	min-width: 450px;
-	font-family: Tahoma, Geneva, sans-serif;
-	background-color: #ffffff;
-	text-align: center;
-	font-family: Georgia, serif;
-	color: #1d1d1f;
-*/
-}
-
-.App select {
-/*
-	height: 20px;
-	width: 175px;
-	text-align-last: center;
-*/
-}
-
-.App input {
-/*
-	width: 175px;
-	text-align: center;
-*/
-}
-
-/* page headers & information */
-/*
-.Title {
-	background-color: darkgray;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	font-size: 4em;
-}
-*/
-
-/*
-.Status {
-	background-color: darkgray;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 1em;
-}
-*/
-
-.Navigation {
-/*
-	background-color: lightgray;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 2em;
-*/
-}
-
-/*
-.NavLink {
-	text-decoration: none;
-	padding-left: 50px;
-	padding-right: 50px;
-}
-
-.NavLink:hover {
-	text-decoration: overline;
-}
-
-.NavLink:visited {
-	color: black;
-}
-
-.NavLink-current {
-	background-color: darkgray;
-}
-*/
-
-/* Home container */
-.Home {
-/*
-	padding-top: 20px;
-	padding-bottom: 20px;
-*/
-}
-
-/* Info page elements */
-.Info {
-/*
-	padding-top: 20px;
-	padding-bottom: 20px;
-*/
-}
-
-.Info p {
-/*
-	width: 425px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-*/
-}
-
-/* Drill page elements */
-.Filters {
-/*
-	padding-top: 20px;
-	padding-bottom: 20px;
-*/
-}
-
-.Filters div {
-/*
-	padding-top: 3px;
-	padding-bottom: 3px;
-*/
-}
-
-#div-cl {
-/*
-	padding-top: 10px;
-	padding-bottom: 10px;
-*/
-}
-
-/* Manage page elements */
-.Manage {
-/*
-	padding-top: 20px;
-	padding-bottom: 20px;
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 100%;
-*/
-}
-
-/*
-.AddAlbumForm {
-	grid-column: 1 / 2;
-	grid-row: 1 / 1;
-}
-*/
-
-/*
-.AddAlbumForm div {
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-*/
-
-/*
-#div-sb {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-*/
-
-/*
-.AddAttributes {
-	grid-column: 2 / 2;
-	grid-row: 1 / 1;
-}
-
-.AddAttributes form {
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-*/
-
-/* Show Albums elements */
-/*
-.ShowAlbums {
-	padding-bottom: 20px;
-}
-*/
-
-.Albums {
-/*
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-evenly;
-*/
-}
-
-.Album {
-/*
-	height: auto;
-	width: 200px;
-	box-shadow: 1px 1px 4px lightgray;
-	padding: 5px;
-	margin-bottom: 15px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-*/
-}
-
-.Album span {
-/* 	font-size: 0.8em; */
-}
-
-/* Root page elements */
-.Root {
-/*
-	padding-top: 20px;
-	padding-bottom: 20px;
-*/
-}
-
-/* unmatched URL page elements */
-.NotFound {
-/*
-	padding-top: 20px;
-	padding-bottom: 20px;
-*/
-}
-
-/* buttons */
-/*
-.btn-lo {
-	background-color: lightgray;
-	background: none;
-	border: none;
-	padding: 0 2px 0;
-	font: inherit;
-	font-size: inherit;
-}
-
-.btn-lo:hover {
-	text-decoration: overline;
-}
-*/
-
-.btn-cl {
-/*
-	padding-left: 20px;
-	padding-right: 20px;
-*/
-}
-
-.btn-sb input {
-/* 	width: auto; */
-}
-
-/* .btn-cl:hover, .btn-sb input:enabled:hover, .btn-rs:hover, .btn-dl:hover */ {
-/*
-	border-width: 1px;
-	border-color: black;
-*/
-}
-
-
-/* updated css */
 /* global */
 .App {
 	background-color: #ffffff;
@@ -486,4 +234,48 @@ main.Info p {
 /* unmatched URL page & Root page elements */
 main.NotFound > section, main.Root > section {
 	grid-column: span 2
+}
+
+/* responsive design */
+@media only screen and (max-width: 1050px) {
+/* Drill page elements */
+	main.Drill > section {
+		grid-column: span 2
+	}
+}
+
+@media only screen and (max-width: 800px) {
+/* global */
+	.App, input, select, button {
+		font-size: 0.9em
+	}
+}
+
+@media only screen and (max-width: 750px) {
+/* Manage page elements */
+	main.Manage > section {
+		grid-column: span 2
+	}
+}
+
+@media only screen and (max-width: 700px) {
+/* Info page elements */
+	main.Info > section {
+		grid-column: span 2
+	}
+
+	main.Info p {
+		max-width: 450px
+	}
+}
+
+@media only screen and (max-width: 450px) {
+/* global */
+	.App, input, select, button {
+		font-size: 0.85em
+	}
+
+	input, select {
+		width: 150px
+	}
 }
